@@ -14,11 +14,10 @@
 - Hailey skapade ett projekt och delade till alla.
 
 # 5. Vi behöver svara minst på dessa frågor för att hitta en bra design för vår produkt:
-Våra produkter tillåter eller inte funktioner nedan:
-- många användare åt gången (Kan flera kunder beställa samtidigt?)
-– ha användarbehörighetsfunktion (Till exempel är det bara köksanvändaren som kan kontrollera de hamburgare som kunderna väljer och markera hamburgarna som färdiga)
-
-Vilka varutyper (menyer, hamburgare, tillbehör, dricka, osv.) som skall finnas? Vem tar ansavar får någon typ av vara?
+- Våra produkter tillåter eller inte funktioner nedan:
+  + många användare åt gången (Kan flera kunder beställa samtidigt?)
+  + ha användarbehörighetsfunktion (Till exempel är det bara köksanvändaren som kan kontrollera de hamburgare som kunderna väljer och markera hamburgarna som färdiga)
+- Vilka varutyper (menyer, hamburgare, tillbehör, dricka, osv.) som skall finnas? Vem tar ansavar får någon typ av vara?
 
 # 7. Språk:
 - Python?
