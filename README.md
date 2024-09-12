@@ -19,6 +19,10 @@
   + ha användarbehörighetsfunktion (Till exempel är det bara köksanvändaren som kan kontrollera de hamburgare som kunderna väljer och markera hamburgarna som färdiga)
   + använda en relationsdatabases eller en NoSQL - database
 - Vilka varutyper (menyer, hamburgare, tillbehör, dricka, osv.) som skall finnas? Vem tar ansavar får någon typ av vara?
+  + Ebba och Hailey: Hamburgare och tillbehör
+  + Wilma:dricka
+  + Sabor: Burger Orderer
+  + Thanh: Administratör
 
 # 7. Språk:
 - Python?
