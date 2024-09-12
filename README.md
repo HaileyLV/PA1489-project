@@ -17,6 +17,7 @@
 - Våra produkter tillåter eller inte funktioner nedan:
   + många användare åt gången (Kan flera kunder beställa samtidigt?)
   + ha användarbehörighetsfunktion (Till exempel är det bara köksanvändaren som kan kontrollera de hamburgare som kunderna väljer och markera hamburgarna som färdiga)
+  + använda en relationsdatabases eller en NoSQL - database
 - Vilka varutyper (menyer, hamburgare, tillbehör, dricka, osv.) som skall finnas? Vem tar ansavar får någon typ av vara?
 
 # 7. Språk:
@@ -28,16 +29,13 @@
 **BurgerOrderer:** Det huvudsakliga webgränssnittet. Behöv inte göra det snyggt. Funktionalitet är viktigaste.
 - Presenterar de olika varutyperna
 - Kunden kan välja vad de vill ha med i sin beställning
-- Kunden **kan anpassa sin beställning ** (t.ex. ta bort “lök” från sin
-“Metric Ton Bacon Burger”)
+- Kunden **kan anpassa sin beställning** (t.ex. ta bort “lök” från sin “Metric Ton Bacon Burger”)
 - Hämtar information om de olika varutyperna från databasen MenuStore
 - När beställningen är klar skickas den via ett REST-anrop till KitchenView
 
 **MenuStore**: En databas som innehåller information om varje typ av vara.
-- Information om de olika varutyperna och hur man kan anpassa dem kan skötas via ett separat gränssnitt såsom adminer.
-- Beställaren hälsar att ni själva får välja om ni vill använda **en relationsdatabas eller en NoSQL-databas**.
+- Information om de olika varutyperna och hur man kan anpassa dem kan skötas via ett separat gränssnitt såsom **adminer**
 
 **KitchenView**: Tar emot beställningar från BurgerOrderer och visar dem för kökspersonalen.
 - När en beställning är mottagen via ett REST-API skall den skrivas ut på skärmen.
 - Behöv bara en enkel textbaserad utskrift.
-- Behöver man inte kunna markera att en beställning är färdig för leverans.
