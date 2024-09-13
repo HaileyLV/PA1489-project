@@ -21,8 +21,8 @@
 - Vilka varutyper (menyer, hamburgare, tillbehör, dricka, osv.) som skall finnas? Vem tar ansavar får någon typ av vara?
   + Ebba och Hailey: Hamburgare och tillbehör
   + Wilma:dricka
-  + Sabor: Burger Orderer
-  + Thanh: Administratör
+  + Thanh: Burger Orderer
+  + Sabor: Administratör
 
 # 7. Språk:
 - Python?
