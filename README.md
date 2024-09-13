@@ -18,11 +18,8 @@
   + många användare åt gången (Kan flera kunder beställa samtidigt?)
   + ha användarbehörighetsfunktion (Till exempel är det bara köksanvändaren som kan kontrollera de hamburgare som kunderna väljer och markera hamburgarna som färdiga)
   + använda en relationsdatabases eller en NoSQL - database
-- Vilka varutyper (menyer, hamburgare, tillbehör, dricka, osv.) som skall finnas? Vem tar ansavar får någon typ av vara?
-  + Ebba och Hailey: Hamburgare och tillbehör
-  + Wilma:dricka
-  + Thanh: Burger Orderer
-  + Sabor: Administratör
+- Utkast till design
+  **https://app.moqups.com/CNsCqWOjxAXBnT1q7BVJIuRvwCjqD6zl/view/page/ad64222d5**
 
 # 7. Språk:
 - Python?
