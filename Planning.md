@@ -29,33 +29,41 @@
 - Just need a simple text based printout.
 
 # 5. Weekly plan:
-## Week 35:
+## Week 35+36
 - Create a team of 5 members.
 - Meet 1 to introduce the team.
-- Hailey created a project and shared to everyone.
+- Hailey created a project on Github and shared to everyone.
 
-## Week 36:
+## Week 37:
 - Learn about product design.
 - Agree on programming language (Python), environment (VS code), gitserver (Github) and preliminary work division.
 - Draft design:
- (https://app.moqups.com/CNsCqWOjxAXBnT1q7BVJIuRvwCjqD6zl/view/page/ad64222d5)
-
-## Week 37:
+  <https://app.moqups.com/CNsCqWOjxAXBnT1q7BVJIuRvwCjqD6zl/view/page/ad64222d5>
+## Week 38:
 - Learn about Flask and download the software.
 - Practice pulling and pushing data from each person's computer to Github.
+- Code BurgerOrderer and KitchenView
 
-## Week 38:
--
 ## Week 39:
--
+- Learn about Flask. Link: <https://www.geeksforgeeks.org/flask-creating-first-simple-application/>
+- Code BurgerOrderer and KitchenView, write documents.
+- Update Engineer diary
 ## Week 40:
--
+- Product assembly and testing the first time
+- Fix bug, update Engineer diary
+- Code MenuStore and write document of MenuStore
+- Update Engineer diary
 ## Week 41:
--
-## Week 41:
--
+- Product assembly and testing the second time
+- Fix bug, write
+- Update Engineer diary
 ## Week 42:
--
+- Product assembly and testing the third time
+- Fix bug, write
+- Update Engineer diary
 ## Week 43:
--
+- Product release
+- Update Engineer diary
+- Write Reflektioner
 ## Week 44:
+- Check all again before submit
