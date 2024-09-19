@@ -1,10 +1,12 @@
 # **This is the programmer diary we write together every day, every week**
 
-## Week 35: 
-  
-## Week 36:
+## Week 35+36: 
+  - Learn about Github.
+  - Create Github accounts and GitHub repo. Link: <https://github.com/HaileyLV/PA1489-project.git>
 ## Week 37:
-- Learn about Flask and download the software.
+- Learn about md syntax. Link: <https://www.markdownguide.org/basic-syntax/>
+## Week 38:
+- Learn about Flask and download the software. Link: <https://flask.palletsprojects.com/en/3.0.x/installation/>.
 - Github command:
 
 | Command s                                 | To do                                                                 |
@@ -12,21 +14,21 @@
 | get init                                    | Initialize a local Git repository                                                                 |
 | get clone <git@github.com:HaileyLV/PA1489-project.git> |Creat a local copy on your computer. Read more: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>                                                              |
 | git checkout -b <branch's name>             | creat a branch or move to the branch                                  |
-| git checkout -                            | jump between two branches                                             |
+| git checkout -                            | jump between two branches                             |              | git pull                   | pull code from remote to local (must do this every time before starting anything)
 | git add [file_name.py]                    | add a python file to the staging area (on local)      |
 | git add -A                 | add all new and changed files to the staging area (on local)         |
-|git status                                | check status in local (if you add a file but not commit, this file will be in red text  |
-|git commit -m "[commit mesage]"           | commit changes (the file we add will be in green text). **Always need to type the commit message for everyone know about what's the new things in your commit**                                                               |
-|git rm [file_name.py]                   |remove a file                                                                |
-|git push origin main                       | push file, code, everything to GitHub                                                               |
-|                                      |                                                                   |
-|                                      |                                                                   |
+|git status                                | check status in local (if you did not add a file to the staging area, this file will be in red text  |
+|git commit -m "[commit mesage]"           | commit changes . **Always need to type the commit message for everyone know about what's the new things in your commit**                                                               |
+|git push origin main                       | push your local content to GitHub (main)                   |
+|git push origin <branch's name> | push your local content to GitHub (branch)
+|git rm [file_name.py]                   |remove a file (local)                                       |
+|git rm file_name.py.txt         | To remove a file both from the Git repository and the filesystem    |
+|git rm file_name.py --cached  |  To remove the file from the repository, but keep it on the filesystem      |
+|touch <file_name.py]       |Create a python file (on local)                                                                   |
 |                                      |                                                                   |
 |                                    |                                                                   |
 |                                      |                                                                   |
 
-## Week 38:
-- 
 ## Week 39:
 - 
 ## Week 40:
