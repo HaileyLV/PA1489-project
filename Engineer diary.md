@@ -5,6 +5,7 @@
   - Create Github accounts and GitHub repo. Link: <https://github.com/HaileyLV/PA1489-project.git>
 ## Week 37:
 - Learn about md syntax. Link: <https://www.markdownguide.org/basic-syntax/>
+- Draw a draft design <https://app.moqups.com/CNsCqWOjxAXBnT1q7BVJIuRvwCjqD6zl/view/page/ad64222d5>
 ## Week 38:
 - Learn about Flask and download the software. Link: <https://flask.palletsprojects.com/en/3.0.x/installation/>.
 - Github command:
