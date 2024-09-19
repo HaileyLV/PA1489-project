@@ -6,17 +6,11 @@
 ## Week 37:
 - Learn about Flask and download the software.
 - Github command:
-### 1. Creat a local copy on your computer:
-- When you create a repository on GitHub, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations.
-Platform navigation:
-https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository_
-### 2. Work with branches:
-git checkout -b BurgerOrder : creat a branch or move to the branch
-git checkout -
+
 | Command s                                 | To do                                                                 |
 | ----------------------------------------- | --------------------------------------------------------------------- |
 | get init                                    | Initialize a local Git repository                                                                 |
-| get clone <git@github.com:HaileyLV/PA1489-project.git> |Creat a local copy on your computer                                                             |
+| get clone <git@github.com:HaileyLV/PA1489-project.git> |Creat a local copy on your computer. Read more: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>                                                              |
 | git checkout -b <branch's name>             | creat a branch or move to the branch                                  |
 | git checkout -                            | jump between two branches                                             |
 | git add [file_name.py]                    | add a python file to the staging area (on local)      |
