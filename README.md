@@ -5,5 +5,5 @@ The contents of the files in the project are as follows:
 - Individuals in the group will update the problems encountered, solutions implemented, Github commands learned during the project implementation.
 ## 2. Planning: 
 - Is the result of group meetings, in which the plans to be implemented, being implemented and implemented are recorded.
-## 3. Reflection: 
+## 3. Reflections: 
 - Summarizes the programming diary.
