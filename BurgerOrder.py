@@ -20,7 +20,7 @@ def add_options():
 
 @app.route('/removeoptions')
 def remove_options():
-    remove_choice == ['Cheese',
+    remove_choice = ['Cheese',
                 'Onion',
                 'Salad',
                 ]
@@ -28,17 +28,20 @@ def remove_options():
 
 @app.route('/confirmation')
 def confirmation():
-    options = ['Sauce',
-                'Onion'
-                ]
-    if add_options () == "" and remove_options () != "":
-        burger_confirm= f"1 {order()} remove {remove_options()}"
-    elif add_options != "" and remove_options == "":
-        burger_confirm= f"1 {order()} add {add_options()}"
-    elif add_options == "" and remove_options == "":
-        burger_confirm= f"1 {order()}"
-    elif add_options != "" and remove_options != "":
-        burger_confirm= f"1 {order(), add {add_options()}, remove {remove_options()}"  
+    order_choice = order() 
+    add_choice = add_options()  
+    remove_choice = remove_options() 
+
+   
+    if not add_choice and remove_choice:
+        burger_confirm = f"1 {order_choice} remove {remove_choice}"
+    elif add_choice and not remove_choice:
+        burger_confirm = f"1 {order_choice} add {add_choice}"
+    elif not add_choice and not remove_choice:
+        burger_confirm = f"1 {order_choice}"
+    else:
+        burger_confirm = f"1 {order_choice}, add {add_choice}, remove {remove_choice}"
+
     return render_template('confirmation.html', confirm = burger_confirm)
 
 @app.route('/chef')
@@ -48,3 +51,6 @@ def chef():
 @app.route('/admin')
 def admin():
     return render_template('admin.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
