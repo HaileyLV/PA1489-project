@@ -12,42 +12,45 @@
 - Flask commands to create a simple application. Link: <https://www.geeksforgeeks.org/flask-creating-first-simple-application/>
 - Github command:
 ### Start with Github
-| Command s                                 | To do     |
+| Commands                                 | To do     |
 | ----------------------------------------- | ------------------------------------------------- |
 | git init                                    | Initialize a local Git repository     |
-| git clone <git@github.com:HaileyLV/PA1489-project.git> |Creat a local copy on your computer. Read more: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>              |
+| git clone <git@github.com:HaileyLV/PA1489-project.git> |Creat a local copy on your computer. Read more: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>   |
 
 ### Work with branches:
-| Command s                                 | To do     |
+| Commands                                 | To do     |
 | ----------------------------------------- | ------------------------------------------------- |
 | git checkout -b <branch's name>             | creat a branch or move to the branch    |
 | git checkout -                            | jump between two branches                       |              
 
-### Creat/remove file, forder on main/branches
-| Command s                                 | To do     |
+### Creat/remove file, forder 
+| Commands                                 | To do     |
 | ----------------------------------------- | ------------------------------------------------- |
 |touch <file_name.py]       |Create a python file (on local)      |
 |mkdir <forder_name]       |Create a forder (on local)      |
 |git rm [file_name.py]                   |remove a file (local)                                       |
 |git rm file_name.py.txt         | To remove a file both from the Git repository and the filesystem    |
 |git rm file_name.py --cached  |  To remove the file from the repository, but keep it on the filesystem      |
-| git add [file_name.py]                    | add a python file to the staging area (on local)      |
-| git add -A                 | add all new and changed files to the staging area (on local)         |
+|git add [file_name.py]                    | add a python file to the staging area (on local)      |
+|git add -A                 | add all new and changed files to the staging area (on local)         |
 
 
 ### Pull och push from local to Github:
-| Command s                                 | To do     |
+| Commands                                 | To do     |
 | ----------------------------------------- | ------------------------------------------------- |
-| git pull                   | pull code from remote to local (**must do this every time before starting anything**)
+|git pull                   | pull code from remote to local (**must do this every time before starting anything**)
 |git status                                | check status in local (if you did not add a file to the staging area, this file will be in red text  |
 |git commit -m "[commit mesage]"           | commit changes . **Always need to type the commit message for everyone know about what's the new things in your commit**        |
 |git push origin main                       | push your local content to GitHub (main)                   |
 |git push origin <branch's name> | push your local content to GitHub (branch)  |
-|Solve problem when using pushing code to Github but the previous pull code is not the latest version |   
-|git log |You need to read and check the difference between local and remote   |
+|*Solve problem when using pushing code to Github but the previous pull code is not the latest version*||   
+|git log |Read and check the difference between local and remote   |
 |git reset --soft HEAD~1 |Reset current HEAD to the specified state. Link: <https://git-scm.com/docs/git-reset> |
 |git stash |Stash the changes in a dirty working directory away. Link: <https://git-scm.com/docs/git-stash>   |
 |git fetch |Stash the changes in a dirty working directory away. Link: <https://git-scm.com/docs/git-stash>   |
+|git stash pop |Apply the changes as well as remove stored files from stash area.. Link: <https://git-scm.com/docs/git-stash> (then check git status och use git add, git commit -m, git push origin...)   |
+
+
 ## Week 39:
 ### 1. Solve problem when using pushing code to Github but the previous pull code is not the latest version:
 See section "Pull och push from local to Github" - week 38
