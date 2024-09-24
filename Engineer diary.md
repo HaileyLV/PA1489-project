@@ -68,7 +68,7 @@ See section "Pull och push from local to Github" - week 38
 ## Week 44:
 -
 
-**• Try to get into the habit of often thinking through what you have done, what you
+**• Try to make a habit of thinking through what you have done, what you
 learned, and what you need to find out.
-• Rather write a little every day than a lot once a week.
-• Don't forget to commit what you wrote so that it appears in the project log.**
+• It's better to write a little every day than a lot once a week.
+• Don't forget to commit what you have written so that it appears in the project log.**
