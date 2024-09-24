@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Kitchen View</title>
+</head>
+<body>
+    <h1>Köksvy</h1>
+    
+    <h2>Beställningar:</h2>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="/clear_orders">
+        <button type="submit">Rensa alla beställningar</button>
+    </form>
+
+    <a href="/">Gå tillbaka till beställningssidan</a>
+</body>
+</html>

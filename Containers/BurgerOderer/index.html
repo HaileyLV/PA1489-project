@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Burger Order</title>
+</head>
+<body>
+    <h1>Välkommen till BurgerBeställning!</h1>
+    
+    <h2>Hamburgare</h2>
+    <form method="POST" action="/order">
+        <button type="submit" name="item" value="Cheeseburger">Cheeseburger</button>
+        <button type="submit" name="item" value="Bacon Burger">Bacon Burger</button>
+        <button type="submit" name="item" value="Vegan Burger">Vegan Burger</button>
+    </form>
+
+    <h2>Dricka</h2>
+    <form method="POST" action="/order">
+        <button type="submit" name="item" value="Coca Cola">Coca Cola</button>
+        <button type="submit" name="item" value="Fanta">Fanta</button>
+    </form>
+
+    <h2>Tillbehör</h2>
+    <form method="POST" action="/order">
+        <button type="submit" name="item" value="Pommes">Pommes</button>
+        <button type="submit" name="item" value="Kaffe">Kaffe</button>
+    </form>
+
+    <a href="/kitchen">Gå till köket</a>
+</body>
+</html>
