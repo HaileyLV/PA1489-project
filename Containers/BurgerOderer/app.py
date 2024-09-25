@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+import os
 
 app = Flask(__name__)
 
@@ -9,10 +10,13 @@ orders = []
 def index():
     return render_template('index.html')  
 
+@app.route('/')
+def submit():
+    return render_template('submit.html', order = orders) 
 
 @app.route('/kitchen')
 def kitchen_view():
-    return render_template('kitchen.html', orders=orders)  
+    return render_template('kitchen.html', orders = orders)  
 
 @app.route('/order', methods=['POST'])
 def order():
