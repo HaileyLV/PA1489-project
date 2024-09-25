@@ -2,45 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<!-- setting up a webpage with proper metadata and linking to an external CSS file using Flask's url_for() function -->
-
     <title>Burger Order</title>
 </head>
 <body>
+    <!-- Welcome customers -->
     <h1>Welcome to Free Burger!</h1>
     <h1>Please order your burger!</h1>
-    
-    <h2>Hamburger</h2>
-    <form method="POST" action="/order">
-        <button type="submit" name="item" value="Burger 90 gram">Burger 90 gram</button>
-        <button type="submit" name="item" value="Burger 160 gram">Burger 160 gram</button>
-        <button type="submit" name="item" value="Vegan Burger">Vegan Burger</button>
-    </form>
+    <form action="/order" method="POST">
+        <!-- Customers can type whatever name they want -->
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-    <h2>Drinks</h2>
-    <form method="POST" action="/order">
-        <button type="submit" name="item" value="Coca Cola">Coca Cola</button>
-        <button type="submit" name="item" value="Fanta">Fanta</button>
-        <button type="submit" name="item" value="Cafe">Cafe</button>
-    </form>
+        <!-- Show the order with check-box to customer to choose -->
+        <label for="burger">Choose your burger:</label><br>
+        <input type="checkbox" name="burger" value="90-gram Burger"> 90-gram Burger<br>
+        <input type="checkbox" name="burger" value="160-gram Burger"> 160-gram Burger<br>
+        <input type="checkbox" name="burger" value="Vegan Burger"> Vegan Burger<br><br>
 
-    <h2>Add slices</h2>
-    <form method="POST" action="/order">
-        <button type="submit" name="item" value="French fries">Frech fries</button>
-        <button type="submit" name="item" value="Chicken wings">Chicken wings</button>
-        <button type="submit" name="item" value="Hallomi">Hallomi</button>
-    </form>
+        <label for="added_items">Add a slide:</label><br>
+        <input type="checkbox" name="added_items" value="French Fries"> French Fries<br>
+        <input type="checkbox" name="added_items" value="Chicken Wings"> Chicken Wings<br>
+        <input type="checkbox" name="added_items" value="Halloumi"> Halloumi<br><br>
 
-    <h2>Remove slices</h2>
-    <form method="POST" action="/order">
-        <button type="submit" name="item" value="Remove cheese">Remove cheese</button>
-        <button type="submit" name="item" value="Remove salad">Remove salad</button>
-        <button type="submit" name="item" value="Remove sauce">Remove sauce</button>
+        <label for="remove_items">Remove from burger:</label><br>
+        <input type="checkbox" name="remove_items" value="Cheese"> Cheese<br>
+        <input type="checkbox" name="remove_items" value="Salad"> Salad<br>
+        <input type="checkbox" name="remove_items" value="Sauce"> Sauce<br><br>
+
+        <label for="drink">Choose a drink:</label><br>
+        <input type="checkbox" name="drink" value="Coca-Cola"> Coca-Cola<br>
+        <input type="checkbox" name="drink" value="Fanta"> Fanta<br>
+        <input type="checkbox" name="drink" value="Coffee"> Coffee<br><br>
+        
+        <!-- When customer clicks on "Submit" button, the order has been saved and send to kitchen-->
+        <button type="submit">Order Now</button>
     </form>
-    
-    <a href="/kitchen">Go to kitchen</a>
 </body>
 </html>
-
