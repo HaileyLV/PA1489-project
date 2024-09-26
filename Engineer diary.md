@@ -57,7 +57,7 @@
 
 ## Week 39:
 - Solve problem when using pushing code to Github but the previous pull code is not the latest version: See section "Pull och push from local to Github" - week 38
-- **Issue: **the Deleted BurgerOrderer (BO) branch directly from the Github screen without reading the message from the terminal window. This resulted in the BO branch on the local but not on the remote, user lost connection with the remote and could not pull or push the code. Solution: evaluated that user did not use this branch locally, so user deleted it locolly and pulled from Github again. Lear more how to delete a branch on local and on remote. See section "Work with branches" -week 38.
+- **Issue:** the Deleted BurgerOrderer (BO) branch directly from the Github screen without reading the message from the terminal window. This resulted in the BO branch on the local but not on the remote, user lost connection with the remote and could not pull or push the code. Solution: evaluated that user did not use this branch locally, so user deleted it locolly and pulled from Github again. Lear more how to delete a branch on local and on remote. See section "Work with branches" -week 38.
 - Download and use FLask-Menu to code. Link <https://flask-menu.readthedocs.io>
 - Virtual machine
 **- How to activate virtual machine from terminal/iTerm...with Mac:**
