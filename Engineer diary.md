@@ -21,7 +21,11 @@
 | Commands                                 | To do     |
 | ----------------------------------------- | ------------------------------------------------- |
 | git checkout -b <branch's name>             | creat a branch or move to the branch    |
-| git checkout -                            | jump between two branches                       |              
+| git checkout -                            | jump between two branches                       |    
+| git branch                           | check all the branches on local                    |
+| git branch --delete <branch's name>  | delete branch on local                  |
+|git branch -a|Confirm Git branch deletion|
+|git push origin --delete|Remove a remote Git branch|
 
 ### Creat/remove file, forder 
 | Commands                                 | To do     |
@@ -53,6 +57,7 @@
 
 ## Week 39:
 - Solve problem when using pushing code to Github but the previous pull code is not the latest version: See section "Pull och push from local to Github" - week 38
+- How to delete a branch on local and on remote. See section "Work with branches" -week 38
 - Download and use FLask-Menu to code. Link <https://flask-menu.readthedocs.io>
 - Virtual machine
 **- How to activate virtual machine from terminal/iTerm...with Mac:**
