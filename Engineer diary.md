@@ -79,6 +79,7 @@ Learn more why we need to use a virtual machine in Mikael's virtual machine lect
 |The product design model will be changed. It is expected to try to do so that the add_items and remove_items are attributes in the buger.                        ||
 
 ## Week 40:
+- Download and try to learn how to use Docker Desktop. Link <https://www.docker.com/products/docker-desktop/>
 - 
 ## Week 41:
 - 
