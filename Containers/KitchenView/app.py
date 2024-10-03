@@ -9,7 +9,7 @@ app = Flask(__name__)
 def view_orders():
     conn = sqlite3.connect('orders.db')
     c = conn.cursor()
-    c.execute("SELECT customer_name, burger, added_items, removed_items, drink FROM orders")
+    c.execute("SELECT customer_name, burger, added_items, removed_items, added_slides, drinks FROM orders")
     orders = c.fetchall()
     conn.close()
     return render_template('kitchen.html', orders=orders)
