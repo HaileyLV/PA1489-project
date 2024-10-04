@@ -80,7 +80,8 @@ Learn more why we need to use a virtual machine in Mikael's virtual machine lect
 
 ## Week 40:
 - Download and try to learn how to use Docker Desktop. Link <https://www.docker.com/products/docker-desktop/>
-- 
+- Download Docker compose
+- Download Adminer
 ## Week 41:
 - 
 ## Week 41:
