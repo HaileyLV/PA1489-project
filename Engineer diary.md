@@ -84,8 +84,6 @@ Learn more why we need to use a virtual machine in Mikael's virtual machine lect
 - Download Adminer
 ## Week 41:
 - 
-## Week 41:
-- 
 ## Week 42:
 - 
 ## Week 43:
