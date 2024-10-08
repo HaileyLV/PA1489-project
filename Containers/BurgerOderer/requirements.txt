@@ -1,3 +1,0 @@
-Flask
-Flask-Menu is on PyPI so all you need is:$ pip install Flask-Menu
-Request

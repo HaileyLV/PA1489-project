@@ -9,7 +9,7 @@
     <h1>Orders today</h1>
     <ul>
         {% for order in orders %}
-            <li>{{ order[0] }} ordered: {{ order[1] }} with slides: {{ order[2] }} (Removed: {{ order[3] }}), Drink: {{ order[4] }}</li>
+            <li>{{ order[0] }} Ordered: {{ order[1] }} (Add items: {{ order[2] }}, Removed: {{ order[3] }}), with Slides: {{ order[4] }} and Drink: {{ order[5] }}</li>
         {% endfor %}
     </ul>
 

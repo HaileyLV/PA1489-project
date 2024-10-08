@@ -1,0 +1,55 @@
+            
+{% extends 'index.html' %}
+
+{% block title %}Fish Burger{% endblock %}
+
+{% block content %}
+    <h2>Let's perfect your delicious fish burger!</h2>
+    <!-- cheese burger -->
+    <form action="/order_done"method = 'POST'>
+
+        <!-- Burger name -->
+        <label for="name">Please enter your name (Optional):</label>
+        <input type="text" id="name" name="name"><br><br>
+       
+        <!-- Hidden Field for Burger Type -->
+        <input type="hidden"name="burger"value="fish burger"/>
+
+        <!-- Customers can type whatever name they want -->
+        <label for="added_items">Add to burger:</label><br>
+        <input type="radio" name="added_items" value="Fish"> Fish<br>
+        <input type="radio" name="added_items" value="Bacon"> Bacon<br>
+        <input type="radio" name="added_items" value="Pickels"> Pickels<br>
+        <input type="radio" name="added_items" value="None" checked>No add items<br><br>
+
+        <label for="remove_items">Remove from burger:</label><br>
+        <input type="radio" name="removed_items" value="Tomato"> Cheese<br>
+        <input type="radio" name="removed_items" value="Salad"> Salad<br>
+        <input type="radio" name="removed_items" value="Sauce"> Sauce<br>
+        <input type="radio" name="removed_items" value="None" checked>Full toppings<br><br>
+
+        <label for="added_slides">Add a slide:</label><br>
+        <input type="radio" name="added_slides" value="French Fries"> French Fries<br>
+        <input type="radio" name="added_slides" value="Chicken Wings"> Chicken Wings<br>
+        <input type="radio" name="added_slides" value="Chicken nugget"> Chicken nugget<br>
+        <input type="radio" name="added_slides" value="None" checked>No slides<br><br>
+
+        <label for="drinks">Choose a drink (optional):</label><br>
+        <input type="radio" name="drinks" value="Coca-Cola">Coca cola<br>
+        <input type="radio" name="drinks" value="Fanta">Fanta<br>
+        <input type="radio" name="drinks" value="Coffee">Coffee<br>
+        <input type="radio" name="drinks" value="None" checked>No drink<br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Order Now!</button>
+    </form>
+
+    <!-- Go Back Button-->
+    <button onclick="goHome()">Go Back!</button>
+        <script>
+            function goHome() {
+                window.location.href = '/';  // Return to the home page
+            }
+        </script>
+
+{% endblock %}

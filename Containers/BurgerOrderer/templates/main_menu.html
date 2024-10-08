@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block title %}main menu{% endblock %}
+
+{% block content %}
+    <!-- Welcome customers - -->
+    <div id="front"> 
+        <p>This is my burger branch</p>
+        <p>Please order your burger here!</p>
+    </div>
+    <div id="container">
+        <div id="meny">
+        <title>Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <body>
+    <form action="/order" method="POST">
+        <div class="w3-container">
+        <h2>Choice Burger Meal</h2>
+        <a href="cheese" class="w3-button w3-black">Cheese Burger</a>
+        <a href="fish" class="w3-button w3-black">Fish Burger</a>
+        <a href="vegan" class="w3-button w3-black">Vegan Burger</a>
+        </div>    
+    </div>
+{% endblock %}
