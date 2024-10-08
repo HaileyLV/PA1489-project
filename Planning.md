@@ -53,17 +53,13 @@
 - Fix bug, update Engineer diary
 - Code MenuStore and write document of MenuStore
 - Update Engineer diary
+### Practice:
+- Did not finish with MenuStore. Need to learn about Docker-compose and Dababase.
+- Did not do any test or fix any bug
 ## Week 41:
-- Product assembly and testing the second time
-- Fix bug, write
+- Finish with database and Docker-compose file.
+- Test, fix bug, write document about exercise 1,2,3
 - Update Engineer diary
 ## Week 42:
-- Product assembly and testing the third time
-- Fix bug, write
-- Update Engineer diary
-## Week 43:
-- Product release
-- Update Engineer diary
-- Write Reflektioner
-## Week 44:
+- Finish with document
 - Check all again before submit
