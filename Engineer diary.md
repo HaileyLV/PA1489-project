@@ -82,17 +82,11 @@ Learn more why we need to use a virtual machine in Mikael's virtual machine lect
 - Download and try to learn how to use Docker Desktop. Link <https://www.docker.com/products/docker-desktop/>
 - Download Docker compose
 - Download Adminer
-- 
 ## Week 41:
-- 
-## Week 41:
-- 
+- Database with help by DB browser for SQLite
+- Docker-compose file
 ## Week 42:
 - 
-## Week 43:
-- 
-## Week 44:
--
 
 **• Try to make a habit of thinking through what you have done, what you
 learned, and what you need to find out.
