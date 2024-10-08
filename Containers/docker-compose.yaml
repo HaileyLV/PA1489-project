@@ -1,0 +1,21 @@
+services:
+  # build docker images, named with customer
+  burgerorderer:
+    image: customer
+    build: ./Containers/BurgerOrderer
+    ports:
+      - 8000:8000
+    volumes:
+      - ./MenuStore/orders.db:/app/orders.db
+  
+  # build docker images, named with kitchen
+  kitchenview:
+    image: kitchen
+    build: ./Containers/KitchenView
+    ports:
+      - 8001:8001
+    volumes:
+      - ./MenuStore/orders.db:/app/orders.db
+
+# from Terminal , come to Containers, type command to run file docker-compose (skip symbol #):
+# docker-compose.yaml up
