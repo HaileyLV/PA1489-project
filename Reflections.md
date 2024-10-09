@@ -14,11 +14,14 @@ https://github.com/HaileyLV/PA1489-project.git
 ### **3.1. Assignment 1:**
 
 #### *3.1.1. Short summary about what configuration management is and why it is used:*
-- _Version control system_: we chose _Github_ to host, manage, track and update our project. The reason is because it opens for everyone, free, popular, easy to register and use. Besides that, Github provides tools for collaborativ development, allowing multiple people to work on projects simultaneously.
-- _Documentation tools_: we use _Markdown_. It's also easy to use, free and recommended by the teacher.
+- _Version control system (VCS)_: we chose _Github_ as our VCS to host, manage, track and update our project. Github is a very good platform that facilitates managing and hosting projects with Git. The reason is because it opens for everyone, free, popular, easy to register and use morover widely supported in the industry, making it an ideal choice for our project. Besides that, Github provides tools for collaborativ development, allowing multiple people to work on projects simultaneously, by offering features like pull requests, branch management, and conflict resolution, GitHub enhances teamwork and reduces the risk of errors when merging code.
+- 
+- _Documentation tools_: We decided to use Markdown for project documentation, and Markdown was recommended by teacher Mikael Svahnberg. Markdown is a lightweight, easy-to-learn markup language used for creating formatted text with plain text editors. It is popular because it is simple, efficient, and readable both in its raw and rendered forms. Furthermore, Markdown is well-integrated with GitHub, allowing us to maintain clear, concise documentation directly within our repository. It helps us document changes, provide guidelines, and create README files in a format that is universally recognized and recommended for clarity.
+
+
 #### *3.1.2. Short summary on the most common workflow with git, including the git commands used:*
-- With Markdown file: we edit directly on Github. Github has integranted Preview directly in the editing process. It's very convenient, so we prefer to use it that way.
-- Other files: during the working process, when we work independently based on the assigned task, we create some branches, push code to them and send merge pull requests to other colleagues. When we meet or contact each other via Discord, we discuss and show each other our achievements. The things we have shown and agreed on, we push directly to the main.
+- With Markdown file: we edit directly on Github. Github has integranted Preview directly in the editing process. GitHub offers a built-in editor with live Preview, making it convenient for real-time editing and review. This simplicity and integration make it our preferred choice for handling documentation files.
+- Other files: during the working process, when we work independently based on the assigned task, we create some branches, push code to them and send merge pull requests to other colleagues. When we meet or contact each other via Discord, we discuss and show each other our achievements. The things we have shown and agreed on, we push directly to the main. This workflow ensures a smooth and organized collaboration process, while reducing merge conflicts.
 - Github command:
 ### Start with Github
 | Commands                                 | To do     |
@@ -65,7 +68,7 @@ https://github.com/HaileyLV/PA1489-project.git
 |git stash pop |Apply the changes as well as remove stored files from stash area.. Link: <https://git-scm.com/docs/git-stash> _(then check git status och use git add, git commit -m, git push origin...) _  |
 #### *3.1.3. Your experiences of working with configuration management:*
 - **What went well?** We have lerned how to get famliar with Github. Not really proficient and professional bur already know a certain number of commands related to Github, enough for our project.
-- **What went less well?** It took us a long time to start using Github. We only recently got a better understanding of how branches work. We mostly meet to make decisions, so we probably encounter and deal with fewer problems than others. We should be more hands-on in out next project.
+- **What went less well?** It took us a long time to start using Github. We only recently got a better understanding of how branches work. We mostly meet to make decisions, so we probably encounter and deal with fewer problems than others. For our next project, we should aim to be more proactive and engage with GitHub earlier in the process to build deeper familiarity.
 - **How did you solve your challenges? What could you have done differently?**
   + The first challenge was that our team was new. No one had any programming experience. Faced with a project that was far beyond our level and imagination, we were really discouraged. We needed to always encourage each other and try to learn or find the necessary knowledge.
   + The next challenge was that our imagination of the project was too different from reality. We drew a schematic design of a burger ordering website (look in _Planning_ to see that super cool design if you want), thinking about whether to add ice or not to the dinks to make the wedsite look like reality, but to implement it was too difficult. When we started working, we didn't know anything so we had to change the design many times.
@@ -76,9 +79,10 @@ https://github.com/HaileyLV/PA1489-project.git
 
 #### *3.2.1. Brief summary of what you have implemented:*
 Describe in 5–10 sentenceswhat you did and how you thought about it
-- The project in general
-- Each container
-- Each module
+- The project in general: We are developing an application where users can customize and place burger orders, which are then displayed in a kitchen view for preparation. The platform is split into two main applications: BurgerOrderer for customers and KitchenView for staff. These apps interact through a shared SQLite database.
+- Each container: The BurgerOrderer app allows customers to customize burgers by adding or removing ingredients, choosing slides (sides), and selecting drinks.
+The KitchenView app displays the incoming orders for the kitchen staff to prepare the burgers.
+- Each module: Each app is built as a separate module, with its own functions for handling the customer interface and order processing.
 
 #### *3.2.2. Your experiences about how the project was implemented.*
 - What went well?
