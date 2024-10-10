@@ -83,11 +83,16 @@ Learn more why we need to use a virtual machine in Mikael's virtual machine lect
 - Download Docker compose
 - Download Adminer
 ## Week 41:
+| Version 3                                 | Version 2                                         |
+| ----------------------------------------- | ------------------------------------------------- |
+|Use dropdown lists to temporarily store user selections. Menus pulled from database. Have actual database files with tables and relations.| Use check-boxes to temporarily record the user's choice. Menu is only hard code. Database had been created by manual code in .py file, had no tables or relations |
+|The orders will be sent to the database and save to tables | The order will be sent to the database file without tables|
+|The kitchen receives the beautiful order with all information | Orders are managed by customer name _(need to check if programs crashes when customer have the same name)_|
 - Database with help by DB browser for SQLite
 - Docker-compose file
 ## Week 42:
+- Use pytest to test and debug: link: <https://docs.pytest.org/en/stable/getting-started.html>
 - 
-
 **• Try to make a habit of thinking through what you have done, what you
 learned, and what you need to find out.
 • It's better to write a little every day than a lot once a week.
