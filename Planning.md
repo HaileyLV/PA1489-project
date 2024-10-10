@@ -60,6 +60,16 @@
 - Finish with database and Docker-compose file.
 - Test, fix bug, write document about exercise 1,2,3
 - Update Engineer diary
+- Need to:
+  **TEST OCH DEBUG:**
+    + Read about "Testing Flask applications with pytest" and try to doing it by yourself
+    + We will forst test that the input data on the order website is sent to kitchenview. You are welcome to do more tests if you want.
+    + Please tell everyone if you find a bug that needs to be fixed before you change any code.
+    + Document everything when working. Check 11-pages of Mikael to have the right structure.
+    + Finished the lastest Monday night.
+  **ASSIGNMENT 2**
+    + Write yourself first and we will meet on Tuesday to write everything together.
+    + Fell free to create an .md file on Github type: thanh-reflection and write there.
 ## Week 42:
 - Finish with document
 - Check all again before submit
