@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Set up the database: sqlite
 def init_db():
     """_summary_
-    """
+    """ 
     conn = sqlite3.connect('orders.db')
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS orders 
