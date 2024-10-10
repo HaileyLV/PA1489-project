@@ -2,7 +2,7 @@ services:
   # build docker images, named with customer
   burgerorderer:
     image: customer
-    build: ./Containers/BurgerOrderer
+    build: ./BurgerOrderer
     ports:
       - 8000:8000
     volumes:
@@ -11,7 +11,7 @@ services:
   # build docker images, named with kitchen
   kitchenview:
     image: kitchen
-    build: ./Containers/KitchenView
+    build: ./KitchenView
     ports:
       - 8001:8001
     volumes:
@@ -19,3 +19,5 @@ services:
 
 # from Terminal , come to Containers, type command to run file docker-compose (skip symbol #):
 # docker-compose.yaml up
+# if you change anything, you need to remove all image that you built before with (skip symbol #)
+  # docker rmi -f customer:latest kitchen:latest && docker-compose up

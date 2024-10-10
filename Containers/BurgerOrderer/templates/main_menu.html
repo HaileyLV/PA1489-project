@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 
-{% block title %}main menu{% endblock %}
+{% block title %}Main Menu{% endblock %}
 
 {% block content %}
     <!-- Welcome customers - -->
@@ -10,16 +10,19 @@
     </div>
     <div id="container">
         <div id="meny">
-        <title>Menu</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <body>
-    <form action="/order" method="POST">
-        <div class="w3-container">
-        <h2>Choice Burger Meal</h2>
-        <a href="cheese" class="w3-button w3-black">Cheese Burger</a>
-        <a href="fish" class="w3-button w3-black">Fish Burger</a>
-        <a href="vegan" class="w3-button w3-black">Vegan Burger</a>
-        </div>    
+            <title>Menu</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <body>
+                <form action="/topping" method = 'POST'>
+                    <div class="w3-container">
+                        <h2>Please Choice Your Burger!</h2>
+                        {% for burger in listBurger %}
+                            <button type="submit" name="burger" value="{{ burger }}">{{ burger|upper }}</button><br>
+                        {% endfor %}
+                    </div>    
+                </form>
+            </body>
+        </div>
     </div>
 {% endblock %}
