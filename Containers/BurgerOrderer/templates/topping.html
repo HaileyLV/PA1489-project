@@ -1,0 +1,60 @@
+            
+{% extends 'index.html' %}
+
+{% block title %}Topping{% endblock %}
+
+{% block content %}
+    <h2>Let's perfect your delicious cheese burger!</h2>
+    <!-- cheese burger -->
+    <form action="/order_done"method = 'POST'>
+
+        <!-- Burger name -->
+
+        <!-- Hidden Field for Burger Type -->
+        <input type="hidden" name="burger" value="{{ burger|upper }}" />
+    
+        <!-- Customers can choose options -->
+        <label for="added_items">Add to burger (optional):</label><br>
+        <select name="added_items" id="added_items">
+            <option value="">Select an item</option> <!-- Optional placeholder -->
+            {% for extraItem in listExtraItem %}
+                <option value="{{ extraItem }}">{{ extraItem|upper }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="removed_items">Remove from burger (optional):</label><br>
+        <select name="removed_items" id="removed_items">
+            <option value="">Select an item</option> <!-- Optional placeholder -->
+            {% for topping in listTopping %}
+                <option value="{{ topping }}">{{ topping|upper }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="added_sides">Add a slides (optional):</label><br>
+        <select name="added_sides">
+            <option value="">Select an item</option> <!-- Optional placeholder -->
+            {% for sideOption in listSideOption %}
+                <option value="{{ sideOption }}">{{ sideOption|upper }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="drinks">Choose a drink (optional):</label><br>
+        <select name="drinks" id="drinks">
+            <option value="">Select an item</option> <!-- Optional placeholder -->
+                {% for drink in listDrink %}
+                    <option value="{{ drink }}">{{ drink|upper }}</option>
+                {% endfor %}
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit">Order Now!</button>
+    </form>
+
+    <!-- Go Back Button-->
+    <button onclick="goHome()">Go Back!</button>
+        <script>
+            function goHome() {
+                window.location.href = '/';  // Return to the home page
+            }
+        </script>
+{% endblock %}

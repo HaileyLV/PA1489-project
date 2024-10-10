@@ -6,10 +6,15 @@
 </head>
 <body>
     <!-- Show the orders with detail of: type of burger, slides, topping and drink. -->
+    <div id="container">
+        <div id="meny">
     <h1>Orders today</h1>
+    
     <ul>
-        {% for order in orders %}
-            <li>{{ order[0] }} Ordered: {{ order[1] }} (Add items: {{ order[2] }}, Removed: {{ order[3] }}), with Slides: {{ order[4] }} and Drink: {{ order[5] }}</li>
+        {% for item in result %}
+            <li>Order ID {{ item[0] }} : (Order content: Burger: {{ item[1] }}) : (Options: {{ item[4]|lower }} {{ item[3]|lower }} : {{ item[2]|upper }} | {{ item[7] | lower  }}
+                {{ item[6] | lower }} : {{ item[5]|upper }} | {{ item[10] | lower }} {{ item[9] | lower }} : {{ item[8]|upper }}| 
+                {{ item[13] | lower }} {{ item[12] | lower }} : {{ item[11]|upper }})</li>
         {% endfor %}
     </ul>
 
