@@ -18,27 +18,29 @@ def view_orders():
             cursor.execute("SELECT * FROM orders")
             orders = cursor.fetchall()
             result = list()
-            app.logger.info(orders)
-            # join tables, create result list that content information of the order: order_id, burger name, items name etc...
-            for order in orders:
-                app.logger.info(order[0])
-                
-                # retrieve data by joining several related tables (burger, order_burger, orders, and items) based on common keys 
+            app.logger.info("Orders: %s", orders)
+             # retrieve data by joining several related tables (burger, order_burger, orders, and items) based on common keys 
                 # such as order_id, burger_id, items_id
+            for order in orders:
+                app.logger.info("Order [0] before join: %s",order[0])
                 cursor.execute("select * from burger b join order_burger ob on b.id = ob.burger_id \
                     join orders o on ob.order_id = o.id join items i on ob.items_id = i.id \
                         where o.id = ?", (order[0],))
+                app.logger.info("Order [0] after join: %s", order[0])
                 items = cursor.fetchall()
-                app.logger.info(items)
+                app.logger.info("Items before for-loop: %s", items)
                 result_item = list()
                 result_item.append(order[0])
-                result_item.append(order[1])
+                app.logger.info("Result_item before for-loop: %s", result_item)
+                result_item.append(items[0][1])
+                app.logger.info("Result_item for-loop1: %s", result_item)
                 for item in items:
                     result_item.append(item[9])
                     result_item.append(item[10])
                     result_item.append(item[11])
                 result.append(result_item)
-            app.logger.info(result)
+                app.logger.info("Result_item for-loop2: %s", result_item)
+            app.logger.info("Result_item for-loop2: %s", result)
     
     # Handle database errors (optional: log the error, show a message, etc.)        
     except sqlite3.Error as e:
