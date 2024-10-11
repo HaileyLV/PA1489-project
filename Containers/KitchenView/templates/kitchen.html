@@ -12,9 +12,9 @@
     
     <ul>
         {% for item in result %}
-            <li>Order ID {{ item[0] }} : (Order content: Burger: {{ item[1] }}) : (Options: {{ item[4]|lower }} {{ item[3]|lower }} : {{ item[2]|upper }} | {{ item[7] | lower  }}
-                {{ item[6] | lower }} : {{ item[5]|upper }} | {{ item[10] | lower }} {{ item[9] | lower }} : {{ item[8]|upper }}| 
-                {{ item[13] | lower }} {{ item[12] | lower }} : {{ item[11]|upper }})</li>
+            <li>Order ID {{ item[0] }} : (Order content: Burger: {{ item[1] | upper }}) : (Options: {{ item[4]|lower }} {{ item[3]|lower }} : {{ item[2] }} | {{ item[7] | lower  }}
+                {{ item[6] | lower }} : {{ item[5] }} | {{ item[10] | lower }} {{ item[9] | lower }} : {{ item[8] }} | 
+                {{ item[13] | lower }} {{ item[12] | lower }} : {{ item[11] }})</li>
         {% endfor %}
     </ul>
 

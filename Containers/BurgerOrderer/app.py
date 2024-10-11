@@ -47,10 +47,10 @@ def topping():
             listItems = cursor.fetchall()
 
         # Filter items based on their type and action
-        listExtraItem = [item[1] for item in listItems if (item[2] == 'ITEMS' or item [2] == 'NO ITEMS') and item[3] == 'ADD']
-        listTopping = [item[1] for item in listItems if (item[2] == 'ITEMS' or item [2] == 'NO ITEMS') and item[3] == 'REMOVE']
-        listSideOption = [item[1] for item in listItems if (item[2] == 'SIDES' or item[2] == 'NO SIDES') and item[3] == 'ADD']
-        listDrink = [item[1] for item in listItems if (item[2] == 'DRINKS' or item [2] == 'NO DRINKS') and item[3] == 'ADD']
+        listExtraItem = [item[1] for item in listItems if item[2] == 'ITEMS' and item[3] == 'ADD']
+        listTopping = [item[1] for item in listItems if item[2] == 'ITEMS' and item[3] == 'REMOVE']
+        listSideOption = [item[1] for item in listItems if item[2] == 'SIDES' and item[3] == 'ADD']
+        listDrink = [item[1] for item in listItems if item[2] == 'DRINKS' and item[3] == 'ADD']
     
     # Handle database errors (optional: log the error, show a message, etc.)    
     except sqlite3.Error as e:
@@ -73,17 +73,12 @@ def done():
     # retrieves form data from an HTTP POST request 
     # and prints the values for debugging purposes
     burger = form_data.get('burger')
-    print(burger)
     added_items = form_data.get('added_items')
-    print(added_items)
     removed_items = form_data.get('removed_items')
-    print (removed_items)
     added_sides = form_data.get('added_sides')
-    print (added_sides)
     drinks = form_data.get('drinks')
-    print (drinks)
     
-    # Prepare for debug
+    # Print for debug
     app.logger.info("Burger: %s", burger)
     app.logger.info("Added Items: %s", added_items)
     app.logger.info("Removed Items: %s", removed_items)
@@ -98,32 +93,40 @@ def done():
             # Insert order and get order_id
             cursor.execute('INSERT INTO orders (status) VALUES (?)', ('Not done',))
             order_id = cursor.lastrowid
+            app.logger.info("Order_ID: %s",order_id)
             burger = burger.lower()
+            app.logger.info("Burger_lower: %s",burger)
+            
             
             # Insert burger into order_burger
             cursor.execute('SELECT * from burger WHERE name = ?', (burger,))
             burger_object = cursor.fetchone()
             burger_id = burger_object[0]
-            app.logger.info(burger_object[0])
+            app.logger.info("Burger_object[0]: %s",burger_object[0])
             cursor.execute('INSERT INTO order_burger (order_id, burger_id) VALUES (?, ?)', 
                        (order_id, burger_id,))
             
             # Insert added items
             added_item_id = get_item_id(cursor, 'ITEMS', added_items, 'ADD')
             insert_order_item(cursor, order_id, burger_id, added_item_id)
+            app.logger.info("Added_item_id: %s", added_item_id)
+            
 
             # Insert removed items
             removed_item_id = get_item_id(cursor, 'ITEMS', removed_items, 'REMOVE')
             insert_order_item(cursor, order_id, burger_id, removed_item_id)
+            app.logger.info("Remove_item_id: %s",removed_item_id)
 
             # Insert added sides
             side_id = get_item_id(cursor, 'SIDES', added_sides, 'ADD')
             insert_order_item(cursor, order_id, burger_id, side_id)
+            app.logger.info("Side_id: %s",side_id)
             
 
             # Insert drinks
             drink_id = get_item_id(cursor, 'DRINKS', drinks, 'ADD')
             insert_order_item(cursor, order_id, burger_id, drink_id)
+            app.logger.info("Drink_id: %s",drink_id)
 
             conn.commit()
         
@@ -161,5 +164,5 @@ def insert_order_item(cursor, order_id, burger_id, item_id=None):
     #                    (order_id, burger_id))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(debug=True, host="0.0.0.0", port=8000)
     
