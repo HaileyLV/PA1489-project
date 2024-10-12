@@ -4,7 +4,7 @@
 - .1. Summaries of the work
    + a. The things I have done every week:
    + b. The things I have learned every week
-- .2. My ideas about:
+- .2. My thinking about:
    + a. Collaboration
    + b. Configuration management
    + c. Implementation and documentation
@@ -115,6 +115,7 @@
 |soucre activate | turn on the virtual machine|
 - Can make an automate.sh to run the docker file more quickly without type every lines in terminal. Run automate.sh with commands: ./automat-run.sh
 - Docker commands:
+
  |Commands                                 | To do                                      |
 | ----------------------------------------- | ------------------------------------------------- |
 |docker build -t <image's name>:<version> .| Build dockers images. Best att use ex: customer: lastest'for the images name and version  |
@@ -134,16 +135,17 @@
 |('INSERT INTO order_burger (order_id, burger_id, items_id) VALUES (?, ?, ?)',(order_id, burger_id, item_id))|insert input data to database|
 |with sqlite3.connect('orders.db') as conn:...|use this code to open database so that database will be closed outside "with"|
 - Docker-compose file
-- Need to set up logging. Very helpful for debug. Print out to console with command: app.logger.info("Burger: %s", burger). Don't need to write ""Burger: %s"," but it's easier to read when it have many row will be printed to console.
 #### Week 42:
 - Need to set up logging. Very helpful for debug. Print out to console with command: app.logger.info("Burger: %s", burger). Don't need to write ""Burger: %s"," but it's easier to read when it have many row will be printed to console.
 - Run pytest from terminal: pytest <pytest file name>
+   + Use "@pytest.fixture" for beginning a function if want to define a reusable setup for testing
+   + A test function start with "test"
 
-### 2. My ideas about:
+### 2. My thinking about:
 #### a. Collaboration:
 **- Chalenges:** We have 5 members in the team. All of us are new, and none of us had any programming experience. Faced with a project that was far beyond our skill level and imagination, we were really discouraged. We had to constantly motivate each other and work hard to learn or search for the necessary knowledge. Together, we helped each other find information, create accounts, download software, and more. By supporting each other, we felt more confident and capable.
-**- What went well:** We planned to meet together min two times per week but it's not working so well in the beginning. We tried to connect with another with another ways: via zoom, discord. I tried to write everything to Github so everyone can read about what we did this week, what we will do next week etc... It worked. Almost members worked hard to finish the project.
-**- What need to change next time** I think next time when I work in a team, we need to talk about team rules, team vision first and commit about it. It helps the team go to the right way and reach the goal more affectively.
+**- What went well:** We planned to meet together min two times per week but it's not working so well in the beginning. We have different circumstances. As I need to take care of my family so I usually study from 8-12, 13-15 and 20-23. During the work, unfortunately, many of our members got sick. We changed to another way to connect to each other with another ways: via zoom, discord. I tried to write everything and push to Github so everyone can read about what we did this week, what we will do next week etc... It worked. We splited the work, worked at different times and everyone tried to be part of the project.
+**- What need to change next time** We had absolutely no idea about the workload, the work sequence, and no one had enough experience to be a team leader, so we struggled to understand the project. I think each of us learned certain lessons after this project. With me, the most important things need to do first is the process. 
 #### b. Configuration management
 - **About Github**:
    + _What went well_: We have lerned how to get famliar with Github. Not really proficient and professional bur already know a certain number of commands related to Github, enough for our project.
@@ -151,8 +153,52 @@
    + _What need to change next time_: For our next project, we should aim to be more proactive and engage with GitHub earlier in the process to build deeper familiarity with its features.
 - **And Markdown**: In the beginning, our vision for the project was very different from reality. We drew a schematic design of a burger ordering website (check out Planning for that cool design if you're interested) and even considered details like adding ice to drinks to make the website feel more realistic. However, the implementation turned out to be too difficult. When we started working, we had little knowledge, so we had to change the design multiple times. We used .md files for weekly planning, documenting everything we learned so that everyone on the team could refer back to it and practice whenever they wanted—like our own project dictionary. This made things easier.
 - **About docker-compose**: When we had the first product, we put all the files in the same folder. Then we learned that we need to do two separate programs. We split them but the problem was that we needed to link the BurgerOrderer app and the KitchenView app to the database. We ran docker and an automate.sh file (to automatically run docker commands on ther terminal).  But the difficulty was that the path to the file on each machine was different. We were suggested to use _Docker Compose_. It really worked.
-#### c. Implementation and documentation
-- I tried to write the code clear and documents so much I can: with code, with file, with project. 
+#### c. Implementation and documentation:
+- I have learned much during the work. For examples: I understand a lite bit why our teacher asked us to do that:
+   + a container based platform, with separate containers for BurgerOrderer, KitchenView, and MenuStore => to manage code easier and it is the reason why we need to learn how to use Docker-compose.
+   + using docker and requirements => to ensure the user environment is consistent with the environment in which we build the product.
+- Short summary of what I have implemented:
+   + The project as a whole: I and my team work together to build two web clients that customer can order burger and people in kitchen can see the burger orders, and a database that contains information about each type of goods.
+   + Each container, each module. What are they used for? You can know about it when you see our project's tree:
+```
+Containers: Our project, of course
+│   ├── BurgerOrderer: 
+│   │   ├── BO_test.py: File test for modul app.py
+│   │   ├── Dockerfile: To built and run a customer's image
+│   │   ├── app.log: File we have after set up logging to debug. We use commands: app.logger.info many times during working to print. It's very helpful to debug.
+│   │   ├── app.py: A back-end file? We built it to take information from database, collect orders and sent orders to database
+│   │   ├── requirements.txt: All needed applications to ensure the program runs in the same environment as when we built the product.
+│   │   └── templates: All front-end files for Burger Order
+│   │       ├── error.html: Error screen during execution. We put a lot of try-except to catch errors and throw it to the error screen. Here, the customer can press return to the main screen and start over. The program will be not crash by it.
+│   │       ├── index.html: Simple CSS to make the home page a little nicer.
+│   │       ├── main_menu.html: Burger order page. When the customer clicks on the burger type, the information is temporarily saved, the home page switches to the topping page for the customer to continue choosing the toppings and options for the burger.
+│   │       ├── topping.html: Customer choose options to burger. The customer can return to the previous page by clicking the "Go back" button and "Submit" to sumbit the order.
+│   │       └── order_done.html: After the customer clicks submit in the topping page, the burger information and options are collected and sent to the database. The order notification page has been collected. The customer order more py clicking the "Click here if you want to order more" button.
+│   ├── KitchenView
+│   │   ├── Dockerfile: To built and run kitchen's image
+│   │   ├── app.py: A back-end file to Kitchen. It used to receive infomation from database and print on the customer scrren.
+│   │   ├── requirements.txt: All needed applications to ensure the program runs in the same environment as when we built the product.
+│   │   └── templates
+│   │       └── kitchen.html: The kitchen can view orders or delete them if desired
+│   ├── MenuStore
+│   │   ├── db_test.py: test database with pytest
+│   │   ├── orders.db: database with SQLite (we used DB Browser for SQLite to built it)
+│   │   └── orders.sqbpro: A executable file rendered by DB Browser for SQLite to when we use it to built database
+│   └── docker-compose.yaml: One for all. Run this file to define and run multi-container Docker applications.
+```
+4. Your experiences of conducting the project.
+• What went well: we leared a new thing everyday. It's so hard 
+• What did not go well?
+• How did you solve your challenges? What could you have done dif-
+ferently?
+• What did you not manage to solve? Why not?
+5. Your experiences of working with containers.
+• What went well?
+• What did not go well?
+• How did you solve your challenges? What could you have done dif-
+ferently?
+• What did you not manage to solve? Why not?
+
 #### d. Testing and debugging
 
 
