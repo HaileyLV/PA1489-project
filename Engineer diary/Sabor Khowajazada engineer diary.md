@@ -7,26 +7,22 @@
    
 ## 1. Summaries of the work (The things I have done every week: (update planning, engineer diary)
 
-#### Week 35
+#### Week 35:
+
+#### Week 36:
 
 
 #### Week 37:
 
 
-
 #### Week 38:
 
 
-#### Week 39
-
-#### Week 42:
-
-
-#### Week 35 - 39:
+#### Week 39:
 
 
 #### Week 40:
- 
-
   
+#### Week 41:
+
 #### Week 42:
