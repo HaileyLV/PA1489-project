@@ -1,4 +1,4 @@
-# **This is the programmer diary I write every week**
+# **Every week, I write in my programmer's diary.**
 
 ## Content in file:
 - .1. Summaries of the work
