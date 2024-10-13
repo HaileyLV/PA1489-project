@@ -3,7 +3,6 @@
 ## Content in file:
 - .1. Summaries of the work
   
-- .2. My thinking about:
    
    
 ## 1. Summaries of the work (The things I have done every week: (update planning, engineer diary)
