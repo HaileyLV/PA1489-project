@@ -4,11 +4,10 @@
 {% block title %}Topping{% endblock %}
 
 {% block content %}
+    <!-- Welcome customers - -->
     <h2>Let's perfect your delicious cheese burger!</h2>
-    <!-- cheese burger -->
     <form action="/order_done"method = 'POST'>
 
-        <!-- Burger name -->
 
         <!-- Hidden Field for Burger Type -->
         <input type="hidden" name="burger" value="{{ burger|upper }}" />

@@ -11,17 +11,63 @@ logging.basicConfig(level=logging.INFO,  # Set the logging level
                     handlers=[logging.FileHandler('app.log'),  # Log to a file
                               logging.StreamHandler()]) 
 
+def select_a_column(column, table_name):
+    """Function to select a specific column from a table.
+
+    Args:
+        column (str): The column name to select.
+        table_name (str): The name of the table to query from.
+    """
+    with sqlite3.connect('orders.db') as conn:
+        cursor = conn.cursor()
+        column_table_check = f'SELECT {column} FROM {table_name}'
+        cursor.execute(column_table_check)
+        lst_column = cursor.fetchall()
+    return lst_column
+
+def another_select_a_column(column, table_name, cursor):
+    """Function use for BO_test, copy code from def index() but add "cursor"
+
+    Args:
+        column (str): The column name to select.
+        table_name (str): The name of the table to query from.
+    """
+    column_table_check = f'SELECT {column} FROM {table_name}'
+    cursor.execute(column_table_check)
+    lst_column = cursor.fetchall()
+    return lst_column
+
+def another_index(column, table, cursor):
+    """_Use for BO_test.py, copy code from def index() but add "cursor"_
+
+    Args:
+        column (_str_): _column name_
+        table (_str_): _table name_
+        cursor (_cursor database_): _cursor name_
+
+    Returns:
+        _list_: _list burger_
+    """
+    # Using a context manager for the database connection
+    try:
+        listBurgerData = another_select_a_column (column, table, cursor)
+        # Use list comprehension to fetch and create the list
+        listBurger = [name[0] for name in listBurgerData]
+
+    # Handle database errors (optional: log the error, show a message, etc.)
+    except sqlite3.Error as e:
+        print(f"Database error: {e}")
+        listBurger = []  # Set to an empty list if an error occurs
+
+    # To pass listBurger to main_menu.html and render the list of burgers
+    return listBurger
+
 # Route for home side. 
 @app.route('/')
 def index():
     # Using a context manager for the database connection
     try:
-        with sqlite3.connect('orders.db') as conn:
-            cursor = conn.cursor()
-            cursor.execute('SELECT name FROM burger')
-            # Get data of burger types in database.
-            listBurgerData = cursor.fetchall()
-            
+        listBurgerData = select_a_column ('name', 'burger')
         # Use list comprehension to fetch and create the list
         listBurger = [name[0] for name in listBurgerData]
 
@@ -40,11 +86,8 @@ def topping():
     print (burger)
     # Using a context manager for the database connection
     try:
-        with sqlite3.connect('orders.db') as conn:
-            cursor = conn.cursor()
-            cursor.execute('SELECT * FROM items')
-            # Get data of all options in database.
-            listItems = cursor.fetchall()
+        # Get data of all options in database.
+        listItems = select_a_column ('*', 'items')
 
         # Filter items based on their type and action
         listExtraItem = [item[1] for item in listItems if item[2] == 'ITEMS' and item[3] == 'ADD']
@@ -156,13 +199,9 @@ def insert_order_item(cursor, order_id, burger_id, item_id=None):
     Insert an item into the order_burger table.
     This now also stores the action (ADD, REMOVE) along with the order.
     """
-    # if item_id is not None and action is not None:
     cursor.execute('INSERT INTO order_burger (order_id, burger_id, items_id) VALUES (?, ?, ?)', 
                        (order_id, burger_id, item_id))
-    # else:
-    #     cursor.execute('INSERT INTO order_burger (order_id, burger_id) VALUES (?, ?)', 
-    #                    (order_id, burger_id))
-
+   
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=8000)
     
