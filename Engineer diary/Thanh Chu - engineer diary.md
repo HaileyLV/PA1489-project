@@ -4,12 +4,13 @@
 - .1. Summaries of the work
    + a. The things I have done every week:
    + b. The things I have learned every week
-- .2. My thinking about:
+- .2. My thought about:
    + a. Collaboration
    + b. Configuration management
    + c. Implementation and documentation
    + d. Testing and debugging
-   
+#### I updated the file daily, weekly from the beginning of the project but as of Oct 11th have renamed, moved files and completely restructured the file, so you may not see that in the Blame section.
+
 ## 1. Summaries of the work
 ### a. The things I have done every week: (update planning, engineer diary)
 #### Week 35+36: 
@@ -141,7 +142,7 @@
    + Use "@pytest.fixture" for beginning a function if want to define a reusable setup for testing
    + A test function start with "test"
 
-### 2. My thinking about:
+### 2. My thoughts about:
 #### a. Collaboration:
 **- Chalenges:** We have 5 members in the team. All of us are new, and none of us had any programming experience. Faced with a project that was far beyond our skill level and imagination, we were really discouraged. We had to constantly motivate each other and work hard to learn or search for the necessary knowledge. Together, we helped each other find information, create accounts, download software, and more. By supporting each other, we felt more confident and capable.
 **- What went well:** We planned to meet together min two times per week but it's not working so well in the beginning. We have different circumstances. As I need to take care of my family so I usually study from 8-12, 13-15 and 20-23. During the work, unfortunately, many of our members got sick. We changed to another way to connect to each other with another ways: via zoom, discord. I tried to write everything and push to Github so everyone can read about what we did this week, what we will do next week etc... It worked. We splited the work, worked at different times and everyone tried to be part of the project.
@@ -187,7 +188,7 @@ Containers: Our project, of course
 │   └── docker-compose.yaml: One for all. Run this file to define and run multi-container Docker applications.
 ```
 4. Your experiences of conducting the project.
-• What went well: we leared a new thing everyday. It's so hard 
+• What went well:   
 • What did not go well?
 • How did you solve your challenges? What could you have done dif-
 ferently?
