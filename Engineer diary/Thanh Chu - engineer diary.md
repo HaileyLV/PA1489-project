@@ -135,7 +135,15 @@
 |('SELECT id FROM items WHERE name = ? AND type = ? AND action = ?',(item_name, item_type, action)) | pull data of item_name, item_type, action based on items_id|
 |('INSERT INTO order_burger (order_id, burger_id, items_id) VALUES (?, ?, ?)',(order_id, burger_id, item_id))|insert input data to database|
 |with sqlite3.connect('orders.db') as conn:...|use this code to open database so that database will be closed outside "with"|
-- Docker-compose file
+- Docker-compose file.
+  Docker compose commands:
+
+|Commands                                 | To do                                      |
+| ----------------------------------------- | ------------------------------------------------- |
+|docker-compose up|run docker compose file to run all applications in this file. Need to cd to the forder that contains docker-compose file. |
+|docker rmi -f customer:latest kitchen:latest && docker-compose up| run docker compose file if you have build and used images before|
+
+#### Week 41:  
 #### Week 42:
 - Need to set up logging. Very helpful for debug. Print out to console with command: app.logger.info("Burger: %s", burger). Don't need to write ""Burger: %s"," but it's easier to read when it have many row will be printed to console.
 - Run pytest from terminal: pytest <pytest file name>
@@ -187,6 +195,7 @@ Containers: Our project, of course
 │   │   └── orders.sqbpro: A executable file rendered by DB Browser for SQLite to when we use it to built database
 │   └── docker-compose.yaml: One for all. Run this file to define and run multi-container Docker applications.
 ```
+- We use a single command to run the project: docker-compose command. <docker-compose up> or <docker rmi -f customer:latest kitchen:latest && docker-compose up>
 4. Your experiences of conducting the project.
 • What went well:   
 • What did not go well?
