@@ -104,5 +104,6 @@ The most common workflow with Git includes steps such as cloning a repository, c
  + Docker Compose became a crucial solution for integrating our two apps, significantly simplifying the development process.
 
 - **What did you not manage to solve? Why not?**
-  + We haven't fully established a proper review and commit approval process. Often, the same person who created the merge request also approved and merged the code. Additionally, we frequently pushed code directly to the remote repository and merge it into the main branch. The reasons for this are outlined in the "What went less well?" section.
-  + We finished assignment 2 at the end of week 41 so we have much less time to work with Test and Debug. We had no experience with project work, so even though we have made a buget in advance of weekly plan, we are still behind schedule. In the next project, we need to calculate the plan earlier, instead of too close as it was with this project.
+ + We have yet to implement a proper review and commit approval process. Often, the same person would create, approve, and merge merge requests, and we tended to push code directly to the main branch. These issues stemmed from our lack of experience and insufficient planning.
+
+ + We finished Assignment 2 late, which left us with little time for the "Test and Debug" phase. In future projects, we need to plan earlier and allow for more buffer time to avoid similar problems.
