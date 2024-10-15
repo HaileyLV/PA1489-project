@@ -11,9 +11,9 @@ https://github.com/HaileyLV/PA1489-project.git
 
 ## **3.Assignment:**
 ### *3.1. Short summary of which functionality you have tested:*
-- **Test**: I use Pytest to test with some functions som contact to the database:
+- **Test**: I use Pytest to test with some functions som contact to the database.
 ### *3.2. Short summary of how you have completed the test:*
-    + All my test failed in the beginning because I did not set up a function to connect to the database (with 4 test) and did not use the relative path from the BurgerOrderer forder to MenuStore (with 2 test). But they were all pass after I edited the codes.
+- All my test failed in the beginning because I did not set up a function to connect to the database (with 4 test) and did not use the relative path from the BurgerOrderer forder to MenuStore (with 2 test). But they were all pass after I edited the codes.
 ### *3.3. Printout from your last test session, so you can see:*
 - How many tests you have written: 6 tests
 - What they test:
