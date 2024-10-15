@@ -14,3 +14,4 @@ The contents of the files in the project are as follows:
   + In the KitchenView folder, you can access and download order information directly from the database.
 ### 5. .gitignore 
 - It is where we specify items that we don’t need to track or use in our repository, but prefer to exclude rather than delete. It helps keep unnecessary files out of version control while still keeping them locally.
+### 6. License: MIT license
