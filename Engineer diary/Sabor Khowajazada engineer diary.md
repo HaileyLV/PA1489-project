@@ -39,22 +39,22 @@ Nothing
         conducted a code review session with the team.
 
 #### Week 38:
-## Task 1: Worked with KitchenView to display orders.
-## Task 2: Started learning about databases (Docker Compose, SQLite ...)
-## Task 3: Updated the documentation for the project.
+###### Task 1: Worked with KitchenView to display orders.
+###### Task 2: Started learning about databases (Docker Compose, SQLite ...)
+###### Task 3: Updated the documentation for the project.
 #### Week 39:
-## Task 1: Collaborated with team members on the design of the pages
-## Task 2: Conducted user tests of the interface for ordering burgers.
-## Task 3: Fixed bugs discovered during user testing.
+###### Task 1: Collaborated with team members on the design of the pages
+###### Task 2: Conducted user tests of the interface for ordering burgers.
+###### Task 3: Fixed bugs discovered during user testing.
 #### Week 40:
-## Task 1: Implemented the menu management system.
-## Task 2: Integrated the menu management with the database.
-## Task 3: Fixed debug and changed template structures on VS code.
+###### Task 1: Implemented the menu management system.
+###### Task 2: Integrated the menu management with the database.
+###### Task 3: Fixed debug and changed template structures on VS code.
 #### Week 41:
-## Task 1: Improved the performance of database queries.
-## Task 2: Worked on deploying the application using Docker.
-## Task 3: Collaborated with team members on the assignments.
+###### Task 1: Improved the performance of database queries.
+###### Task 2: Worked on deploying the application using Docker.
+###### Task 3: Collaborated with team members on the assignments.
 #### Week 42:
-## Task 1: Collaborated with team members on the assignments.
-## Task 2: Completed the application features. 
-## Task 3: Performed final code review and merged branches.
+###### Task 1: Collaborated with team members on the assignments.
+###### Task 2: Completed the application features. 
+###### Task 3: Performed final code review and merged branches.
