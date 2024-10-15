@@ -19,6 +19,7 @@ Testing has been a continuous process throughout the development work. at the en
 Documented Debugging Experience
 Debugging Session: Week 38
 During week 38, we encountered a hard-to-find error in our ordering function in the BurgerOrderer module. The user was unable to submit their order, and no product selections were correctly recorded in the system. To solve this, we started by analyzing log files and stepped through the code with the debugger. By setting breakpoints, we were able to identify that the problem was in the handling of POST data from the HTML form. After we fixed the bug, we verified the functionality by running unit tests and manual tests, and the issue was resolved.
+
 Reflections:
 Debugging was a learning process where we not only solved a technical problem but also gained insights into how important proper validation of user input is. We learned to improve our testing process by introducing more test cases to prevent similar bugs from occurring in the future.
 
