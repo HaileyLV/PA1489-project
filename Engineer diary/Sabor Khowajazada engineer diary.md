@@ -24,7 +24,7 @@ During week 38, we encountered a hard-to-find error in our ordering function in 
 Debugging was a learning process where we not only solved a technical problem but also gained insights into how important proper validation of user input is. We learned to improve our testing process by introducing more test cases to prevent similar bugs from occurring in the future.
 
 #### Week 35:
-Nothing
+###### I had no idea what to do, everything was unclear for me.
 #### Week 36:
 ###### Task 1: Started learning about Flask, Git, and GitHub
 ###### Task 2: continuation with Githubb: learned about how to make a Repository.
