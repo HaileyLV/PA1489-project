@@ -56,6 +56,7 @@
 - Use pytest to test and debug: link: <https://docs.pytest.org/en/stable/getting-started.html>
 - Finish with engineer diary
 - Check all things and submit submissions
+- Create setup.py
 
 ### b. The things I have learned every week:
 #### Week 35 - 39:
@@ -148,7 +149,14 @@
    + Use "@pytest.fixture" for beginning a function if want to define a reusable setup for testing
    + A test function start with "test"
    + Set up a function to connect to the database in an other forder: def db_connection()
+- Setup.py
+Setup.py commands:
 
+|Commands                                 | To do                                      |
+| ----------------------------------------- | ------------------------------------------------- |
+|python setup.py install|installs the package by copying its files into your Python environment|
+|python setup.py develop|install my package in development mode|
+ 
 ### 2. My thoughts about:
 #### a. Collaboration:
 - **Chalenges**: We have 5 members in the team. All of us are new, and none of us had any programming experience. Faced with a project that was far beyond our skill level and imagination, we were really discouraged. We had to constantly motivate each other and work hard to learn or search for the necessary knowledge. Together, we helped each other find information, create accounts, download software, and more. By supporting each other, we felt more confident and capable.
