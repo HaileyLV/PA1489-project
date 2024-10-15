@@ -33,9 +33,7 @@ Debugging was a learning process where we not only solved a technical problem bu
 #### Week 37:
 ###### Task 1: continuation with Flask: Learned about Flask and how to use it.
 ###### Task 2: Started learning about HTML and CSS.
-###### Task 3: Implemented the burger customization feature: I made a BurgerOreder application, a user could order a burger and send it to the kitchen and you could see it on the KitchenView page.
-Created HTML templates for the burger ordering interface.
-conducted a code review session with the team.
+###### Task 3: Implemented the burger customization feature: I made a BurgerOreder application, a user could order a burger and send it to the kitchen and you could see it on the KitchenView page. Created HTML templates for the burger ordering interface. Conducted a code review session with the team.
 
 #### Week 38:
 ###### Task 1: Worked with KitchenView to display orders.
