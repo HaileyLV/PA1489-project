@@ -8,7 +8,7 @@
    + a. Collaboration
    + b. Configuration management
    + c. Implementation and documentation
-   + d. Testing and debugging
+   + d. Testing and debugging (include debug sections)
 #### I updated the file daily, weekly from the beginning of the project but as of Oct 11th have renamed, moved files and completely restructured the file, so you may not see that in the Blame section.
 
 ## 1. Summaries of the work
@@ -298,4 +298,18 @@ insert to
 - Debug Session: Checked the def topping in BurgerOrderer
 - Solution: My Flask application is trying to render an error.html template, but it cannot find that file in my templates directory. I created an error.html file inside the template ditectory and now it works.
 - References:
+```
+```
+- October 7, 2024
+- Problem: I have a problem with error message "out of range" 
+- Debug Session: Try to print the orders from KitchenView
+- Solution: I use command app.logger.info to print every lines to console, check and edit code and now it works.
+- References:
+```
+```
+- October 11, 2024
+- Problem: I have a problem with error message that there is no table named "burger" in database
+- Debug Session: Try to test the table exists in database
+- Solution: I import 'os' module and use 'join' to set up the relative path from the BurgerOrderer folder to MenuStore during this test and now it works.
+- References: https://stackoverflow.com/questions/35337704/how-to-open-a-file-by-its-path-relative-to-the-python-module-when-that-module-i
 ```
