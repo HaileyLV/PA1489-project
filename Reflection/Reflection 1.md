@@ -10,15 +10,12 @@
 https://github.com/HaileyLV/PA1489-project.git
 
 ## **3.Assignment:**
-
-### **3.1. Assignment 1:**
-
-#### *3.1.1. Short summary about what configuration management is and why it is used:*
+### *3.1. Short summary about what configuration management is and why it is used:*
 - _Version control system (VCS)_: we chose _Git_ as our VCS to host, manage, track and update our project. The web-based platform we used to built our product is Github, a very good platform that facilitates managing and hosting projects with Git. Moreover, Github opens for everyone, free, popular, easy to register and use, and widely supported in the industry, making it the ideal choice for our project. Besides that, Github provides tools for collaborativ development, allowing multiple people to work on projects simultaneously, by offering features like pull requests, branch management, and conflict resolution, GitHub enhances teamwork and reduces the risk of errors when merging code.
 - _Application Configuration_: _Docker compose:_ Our teacher recommended Docker Compose when we had trouble running our project, where two .py files were in separate folders, and the database was in another folder. Docker Compose helps manage these multiple components (like services, databases) by defining them in a single configuration file, allowing everything to run together seamlessly.
 - _Documentation Tools_: We decided to use _Markdown_, which was also recommended by our teacher, for project documentation. It is a lightweight, easy-to-learn markup language used for creating formatted text with plain text editors. Markdown is popular because it is simple, efficient, and readable in both its raw and rendered forms. Additionally, it is well-integrated with GitHub, allowing us to maintain clear and concise documentation directly within our repository. It helps us document changes, provide guidelines, create plans, write engineering diaries, and generate README files in a format that is universally recognized and recommended for clarity.
 
-#### *3.1.2. Short summary on the most common workflow with git, including the git commands used:*
+### *3.2. Short summary on the most common workflow with git, including the git commands used:*
 - **_With Markdown files_**: We edit directly on GitHub, which has an integrated preview feature in the editing process. GitHub offers a built-in editor with a live preview, making real-time editing and review convenient. This simplicity and integration make it our preferred choice for handling documentation files.
 - **_Other files_**:
     + In our workflow, when handling tasks independently, we created branches, pushed code to them, and submited pull requests for review by all teams mebbers before merging.
@@ -70,7 +67,7 @@ https://github.com/HaileyLV/PA1489-project.git
 |git stash |Stash the changes in a dirty working directory away. Link: <https://git-scm.com/docs/git-stash>   |
 |git fetch |Stash the changes in a dirty working directory away. Link: <https://git-scm.com/docs/git-stash>   |
 |git stash pop |Apply the changes as well as remove stored files from stash area.. Link: <https://git-scm.com/docs/git-stash> _(then check git status och use git add, git commit -m, git push origin...) _  |
-#### *3.1.3. Your experiences of working with configuration management:*
+### *3.3. Your experiences of working with configuration management:*
 - **What went well?**
     + We have lerned how to get famliar with Github. Not really proficient and professional bur already know a certain number of commands related to Github, enough for our project.
     + It works very nice with Markdown. We used it a lot in the project with many filer: readme, planning, reflecktion, engineer diary...
