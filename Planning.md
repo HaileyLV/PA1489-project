@@ -71,5 +71,7 @@
     + Write yourself first and we will meet on Tuesday to write everything together.
     + Fell free to create an .md file on Github type: thanh-reflection and write there.
 ## Week 42:
-- Finish with document
+- Finish with document:
+  + Individuals update their thoughts into files: Reflection 1, 2, 3. On Wednesday, we will compile everything and summarize it into complete files and submit all.
+  + Create License and setup.py
 - Check all again before submit
