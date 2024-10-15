@@ -25,4 +25,4 @@ Containers: Our project, of course
 │   │   └── orders.sqbpro: A executable file rendered by DB Browser for SQLite to when we use it to built database
 │   └── docker-compose.yaml: One for all. Run this file to define and run multi-container Docker applications.
 ```
-## **You need to run docker-compuse to define and run multi-container Docker applications.**
+## **You need to run docker-compose to define and run multi-container Docker applications.**
