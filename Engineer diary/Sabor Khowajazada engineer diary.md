@@ -5,12 +5,14 @@
 This engineering journal documents my progress over 10 weeks of project development. Each week I've summarized the most important tasks I completed, including implementing features, designing databases, and conducting user testing. I've also focused on collaborating with my team, improving code quality, and preparing for the project's launch. This journal serves as a reflection on my experiences and lessons learned during the development process and provides an overview of the challenges I encountered and how I overcame them.
    
 ## 1. Summaries of the work (The things I have done every week: (update planning, engineer diary)
-Collaboration with the team has been critical to the success of the project. Every week we have had meetings to discuss the progress of the project, distribute tasks, and solve problems that have arisen. By using GitHub, we have been able to share code, manage pull requests, and ensure that everyone is working on the same code base.
+a) Collaboration with the team has been critical to the success of the project. Every week we have had meetings to discuss the progress of the project, distribute tasks, and solve problems that have arisen. By using GitHub, we have been able to share code, manage pull requests, and ensure that everyone is working on the same code base.
 
 (b) Configuration Management
 We have implemented a robust configuration management process by using Git for version control. By creating separate branches for different functions, we have been able to work in parallel without disturbing the main project. Once a feature has been tested and approved, it has been merged into the master branch, ensuring continuous integration.
+
 (c) Implementation and Documentation
 The implementation work has focused on developing new functions and improving existing components. Documentation has been created in parallel to ensure that all code is easy to understand and that instructions are provided on how to set up and use the system. Every week I have updated the documentation to reflect changes in the architecture or functionality.
+
 (d) Testing and Debugging
 Testing has been a continuous process throughout the development work. at the end of the project, we've been running unit tests to ensure that new functionality works as expected and doesn't break previous code. Debugging has been challenging at times, but by analyzing error messages and using tools like breakpoints and logging, we've been able to solve most problems efficiently.
 
