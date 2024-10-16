@@ -4,12 +4,12 @@
 - .1. Summaries of the work
    + a. The things I have done every week:
    + b. The things I have learned every week
-- .2. My thought about:
+- .2. My thoughts about:
    + a. Collaboration
    + b. Configuration management
    + c. Implementation and documentation
    + d. Testing and debugging (include debug sections)
-#### I updated the file daily, weekly from the beginning of the project but as of Oct 11th have renamed, moved files and completely restructured the file, so you may not see that in the Blame section.
+#### I updated the file daily, weekly from the beginning of the project but as of Oct 11th have renamed, moved files and completely restructured the file, so you may not see that in the Blame section or histories.
 
 ## 1. Summaries of the work
 ### a. The things I have done every week: (update planning, engineer diary)
