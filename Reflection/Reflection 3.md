@@ -22,7 +22,9 @@ https://github.com/HaileyLV/PA1489-project.git
 - How many tests succeed or fail: all of them are succeed
 
 ### *3.4. Your experiences about writing automated unit tests:*
-- What went well?: We know how to use Pytest and could write a few test case.
+- What went well?:
+      + We know how to use Pytest and could write a few test case.
+      + During the "Test and Debug" phase, we had to break down the code and carefully analyze our test cases, which was challenging but highly educational.
 - What went less well? 
 - How did you solve the difficulties? Could you have done differently?
     + When we started write som test cases, all of them failed. We tried to set up a function to connect to the database and use the relative path from the BurgerOrderer forder to MenuStore. It worked.
