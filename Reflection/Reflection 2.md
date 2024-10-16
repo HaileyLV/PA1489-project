@@ -11,18 +11,15 @@ https://github.com/HaileyLV/PA1489-project.git
 
 ## **3.Assignment:**
 ### *3.1. Short summary of what you have implemented:*
-Describe in 5–10 sentenceswhat you did and how you thought about it
-#### **Sabor:**
-- The project in general: We are developing an application where users can customize and place burger orders, which are then displayed in a kitchen view for preparation. The platform is split into two main applications: BurgerOrderer for customers and KitchenView for staff. These apps interact through a shared SQLite database.
-- Each container: The BurgerOrderer app allows customers to customize burgers by adding or removing ingredients, choosing slides (sides), and selecting drinks.
-The KitchenView app displays the incoming orders for the kitchen staff to prepare the burgers.
-- Each module: Each app is built as a separate module, with its own functions for handling the customer interface and order processing.
-- #### **Thanh**
-- - **I have learned much during the work**. For examples: I understand a lite bit why our teacher asked us to do that:
+Describe in 5–10 sentences what you did and how you thought about it
+- **We have learned much during the work**. For example, we understand why our teacher asked us to do this project:
    + a container based platform, with separate containers for BurgerOrderer, KitchenView, and MenuStore => to manage code easier and it is the reason why we need to learn how to use Docker-compose.
    + using docker and requirements => to ensure the user environment is consistent with the environment in which we build the product.
-- **Short summary of what I have implemented:**
-   + _The project as a whole_: I and my team work together to build two web clients that customer can order burger and people in kitchen can see the burger orders, and a database that contains information about each type of goods.
+- **Short summary of what We have implemented:**
+   + _The project as a whole_: We are developing an application where users can customize and place burger orders, which are then displayed in a kitchen view for preparation. The platform is split into two main applications: BurgerOrderer for customers and KitchenView for staff. These apps interact through a shared SQLite database.
+   + _Each container_: The BurgerOrderer app allows customers to customize burgers by adding or removing ingredients, choosing sides (sides), and selecting drinks.
+The KitchenView app displays the incoming orders for the kitchen staff to prepare the burgers.
+    + _Each module_: Each app is built as a separate module, with its own functions for handling the customer interface and order processing.
    + _Each container, each module_. What are they used for? You can know about it when you see our project's tree:
 ```
 Containers: Our project, of course
@@ -61,47 +58,37 @@ Containers: Our project, of course
 │   ├── dist: The folder and all files was automatically created when running the setup.py command.
 │   │   └── PA1489-0.1-py3.9.egg
 │   ├── docker-compose.yaml: One for all. Run this file to define and run multi-container Docker applications.
-│   └── setup.py: a central part of packaging a Python project. It defines metadata about the project (such as name, version, and author) and instructions on how to install the project and its dependencies. I copied this sentense from internet. I understand only that is's importand and helpful.
+│   └── setup.py: a central part of packaging a Python project. It defines metadata about the project (such as name, version, and author) and instructions on how to install the project and its dependencies. We copied this sentense from internet. We understand only that is's importand and helpful.
 ```
 ### *3.2. Your experiences about how the project was implemented.*
 - **What went well?**
-  **Thanh**
     + We have fulfilled most of the requirements of the assignment.
     + We use a single command to run the project**: docker-compose command. <docker-compose up> or <docker rmi -f customer:latest kitchen:latest && docker-compose up>
     + We have a setup.py file to define metadata about the project (such as name, version, and author) and instructions on how to install the project and its dependencies.
-    + We have list types of burgers and options can see all different type as retreived from the MenuStore database. Our database is full of information, defining the types of coponents and the relationships betwwen them.
-    + User can search database MenuStore contains infomation about the different type of goods and is being used by BurgerOrderer.
-    + Customers can order burger, add or remove items, get the choice of options and drink. Then the order will be sent to database.  Order id is automatically numbered with function lastrowid.
-    + KitchenView receives the orders, prints them and can delete them. When user delete orders in KitchenView, all information of order will be removes in database.
+    + We have list types of burgers and options can see all different type as retreived from the MenuStore database. Our database is full of information, defining the types of coponents and the relationships between them.
+    + User can search database MenuStore contains infomation about the different type of goods and is used by BurgerOrderer.
+    + Customers can order a burger, add or remove items, get the choice of options and drink. Then the order will be sent to the database. Order id is automatically numbered with function lastrowid.
+    + KitchenView receives the orders, prints them and can delete them. When users delete orders in KitchenView, all information of order will be removes in database.
     + Use many try-except to catch and show errors. Customers can return to the main screen from the error screen and re-excute the transaction, the program is not interrupted.
 - **What went less well?**
-  **Thanh**
-    + Most of our code was collected from many sources, under our efforts to learn, but there were still may limitations. Therefore, our code maybe has many duplicates, redundancies, omissions and imperfections. Howerver, we tried to do is as best as we could.
-    + We don't have a good process, the division of work is not clear, so there is a lot of duplication. It took times but the efficiency was not high.
-- **How did you solve the difficulties? Could you have done differently?**
-  **Thanh**
-    + The first challenge was that we had just started learning python when the project started. There was one team member who knew CSS and HTML. So it took us very long time to figure out what to do. Since we did not know where to start, we just coded the same functions at the same time. Then we showed it to each other and chose the best on to work on. This made the project progress very slow but we learned a bit more.
+    + Most of our code was collected from many sources, under our efforts to learn, but there were still many limitations. Therefore, our code might have many duplicates, redundancies, omissions and imperfections. However, we tried to do is as best as we possibly could.
+    + We did not have a good process. The division of work is not clear, so there is a lot of duplication. It took times and the project lacked efficency.
+- **How did you solve the difficulties? Could you have done anything differently?**
+    + The first challenge was that we had just started learning python when the project started. There was one team member who knew CSS and HTML. Therefore, it took us a very long time to figure out what to do. Since we did not know where to start, we just coded the same functions at the same time. Then we showed it to each other and chose the best to work on. This made the project progress very slow but we learned a bit more.
     + When we had our first product, we did not understand the assignment requirements properly so we only wrote code for one single application code for the whole product. Therefore, we had to re-edit the entire code.
-    + When we finished version 2, we had to run two applications on two different text-based interfaces (iTerm and Terminal). Then we learned about Docker.
-    + Finally is database. We chose SQLite instead of NoSQL because it gave us chance to pratice with database before the following courses. We spent a lot of time figuring out how many tables we needed, what the relationships were between the columns in the tables, and what joins commands we needed to use. It'difficult and confusing during working with database so we used many times command app.logger.info to print data and edited it to fit our needs.
+    + When we finished version 2, we had to run two applications on two different text-based interfaces (iTerm and Terminal). Then we learned about Docker and it became more efficient.
+    + Finally is database. We chose SQLite instead of NoSQL because it gave us chance to pratice with database before the following courses. We spent a lot of time figuring out how many tables we needed, what the relationships were between the columns in the tables, and what joins commands we needed to use. It was difficult and confusing during working with our database so we used many command app.logger.info to print data and edited it to fit our needs.
 - **What did you not manage to solve? Why not?**
-  **Thanh**
-    + We understod that it was not mandatory to use REST API completely for the whole project, so we used lite REST APT and the rest with Jinja2 instead. It's much more familiar, convenient and easty to learn and use for newbies like us. But we will learn about REST APT after this course.
-    + There are many things we wrote that are not complete, I will come back to this exercise when I know more about programming. I guess that it will be intresting to see the lines I have coded nowaday.
-    + The process. We did not have a good process. In the next project, we need to pay more attention to establishing the implementation process before starting to work.
+    + We understod that it was not mandatory to use REST API completely for the whole project, so we used REST APT to collect orders and the rest with Jinja2. It's much more familiar, convenient and easty to learn. It is also used for newbies like ourselves. But we will learn more about REST APT after this course.
+    + There are many things we wrote that are not complete. We will come back to this exercise when We know more about programming. We guess that it will be intresting to see the lines We have coded nowaday.
+    + The process. We did not have a good process. In the next project, we need to pay more attention to establishing the implementation process before starting to work. Setting up a good structure is extreamly important for projects like this to work.
 ### *3.3. Your experiences of working with containers:*
 - **What went well?**
-    **Thanh**
-    + We learned how to work with containers and ran the produckt with two applications located in two containers BurgerOrderer and KitchenView, while the database is in MenuStore.
-    + We know lite about how to buid a docker file, docker-compose and how to run it.
+    + We learned how to work with containers and ran the product with two applications located in two containers BurgerOrderer and KitchenView, while the database is in MenuStore.
+    + We know little about how to buid a docker file, docker-compose and how to run it.
 - **What went less well?**
-  **Thanh**
-    + Like I wrote above, we are new developers so out code still has many problem.
+    + Like We wrote above, we are new developers so our code still has a lot of problems.
 - **How did you solve the difficulties? Could you have done differently?**
-  **Thanh**
-    + The challenge was when the app.py files were located in two different forders and database was in MenyStore. We found a way to create vitual databases in BurgerOrderer and KitchenView and built docker images, created an automate.sh file to run one command for all. However, the problem was that the path to each person's file database was different so it did not work as we expected. We were instructed by the teacher to use docker-compose. It worked.
+    + The challenge was when the app.py files were located in two different folders and database was in MenyStore. We found a way to create vitual databases in BurgerOrderer and KitchenView and built docker images, created an automate.sh file to run one command for everything. However, the problem was that the path to each person's file database was different so it did not work as we expected. We were instructed by the teacher to use docker-compose and it worked out.
 - **What did you not manage to solve? Why not?**
-  **Thanh**
-    + We tried out best to complete the assignment with the best quality with our current level. Some functions we have thougt of but dare nor risk implementing when the time for the project was not much. We may come back and implement it after this course.
-
-
+    + We tried our best to complete the assignment with the best quality possible considering our current knowledge. Some functions we have thougt of but did not dare risking implementing when the time for the project was not much. Though, we may come back and implement it after this course.
