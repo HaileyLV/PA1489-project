@@ -262,6 +262,7 @@ Containers: Our project, of course
    + All my test failed in the beginning because I did not set up a function to connect to the database (with 4 test) and did not use the relative path from the BurgerOrderer folder to MenuStore (with 2 test). But they were all pass after I edited the codes.
       + **What went well**: I know how to use Pytest and could write a few test case.
       + **How did you solve your challenges? What could you have done differently?**
+         + When I started write som test cases, all of them failed. I tried to set up a function to connect to the database and use the relative path from the BurgerOrderer forder to MenuStore. It worked.
          + Our functions are grouped quite a lot so testing is also more difficult. I have splitted the function to make it easier to test and I could write two test with BurgerOrderer because of it.
       + **What did you not manage to solve? Why not?**
          + We started with assignment 3 very late. The time was too urgent so I could not perform as many test cases as expected. In the next project, we had to adjust the time estimate.
