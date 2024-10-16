@@ -60,7 +60,7 @@
 
 ### b. The things I have learned every week:
 #### Week 35 - 39:
-- Lear about necessary material that need to know: Github, markdown, app.moqups, flask.
+- Learn about necessary material that need to know: Github, markdown, app.moqups, flask.
 - Github command:
   
 ##### Start with Github
@@ -79,11 +79,11 @@
 |git branch -a|Confirm Git branch deletion|
 |git push origin --delete|Remove a remote Git branch|
 
-##### Creat/remove file, forder 
+##### Creat/remove file, folder 
 | Commands                                 | To do     |
 | ----------------------------------------- | ------------------------------------------------- |
 |touch <file_name.py]       |Create a python file _(on local_)      |
-|mkdir <forder_name]       |Create a forder _(on local)_      |
+|mkdir <folder_name]       |Create a folder _(on local)_      |
 |git rm [file_name.py]                   |remove a file _(local) _                                      |
 |git rm file_name.py.txt         | To remove a file both from the Git repository and the filesystem _(when file has been pushed to Github) _   |
 |git rm file_name.py --cached  |  To remove the file from the repository, but keep it on the filesystem _(when file has been pushed to Github)_ |
@@ -140,7 +140,7 @@
 
 |Commands                                 | To do                                      |
 | ----------------------------------------- | ------------------------------------------------- |
-|docker-compose up|run docker compose file to run all applications in this file. Need to cd to the forder that contains docker-compose file. |
+|docker-compose up|run docker compose file to run all applications in this file. Need to cd to the folder that contains docker-compose file. |
 |docker rmi -f customer:latest kitchen:latest && docker-compose up| run docker compose file if you have build and used images before|
 
 #### Week 42:
@@ -148,7 +148,7 @@
 - Run pytest from terminal: pytest <pytest file name>
    + Use "@pytest.fixture" for beginning a function if want to define a reusable setup for testing
    + A test function start with "test"
-   + Set up a function to connect to the database in an other forder: def db_connection()
+   + Set up a function to connect to the database in an other folder: def db_connection()
 - Setup.py
 Setup.py commands:
 
@@ -160,7 +160,7 @@ Setup.py commands:
 ### 2. My thoughts about:
 #### a. Collaboration:
 - **Chalenges**: We have 5 members in the team. All of us are new, and none of us had any programming experience. Faced with a project that was far beyond our skill level and imagination, we were really discouraged. We had to constantly motivate each other and work hard to learn or search for the necessary knowledge. Together, we helped each other find information, create accounts, download software, and more. By supporting each other, we felt more confident and capable.
-- **What went well**: We planned to meet together min two times per week but it's not working so well in the beginning. We have different circumstances. As I need to take care of my family so I usually study from 8-12, 13-15 and 20-23. During the work, unfortunately, many of our members got sick. We changed to another way to connect to each other with another ways: via zoom, discord. I tried to write everything and push to Github so everyone can read about what we did this week, what we will do next week etc... It worked. We splited the work, worked at different times and everyone tried to be part of the project.
+- **What went well**: We planned to meet together min two times per week but it's not working so well in the beginning. We have different circumstances. As I need to take care of my family so I usually study from 8-12, 13-15 and 20-23. During the work, unfortunately, many of our members got sick. We changed to another way to connect to each other with another ways: via zoom, discord. I tried to write everything and push to Github so everyone could read about what we did this week, what we will do next week etc... It worked. We splited the work, worked at different times and everyone tried to be part of the project.
 - **What need to change next time** We had absolutely no idea about the workload, the work sequence, and no one had enough experience to be a team leader, so we struggled to understand the project. I think each of us learned certain lessons after this project. With me, the most important things need to do first is the process. 
 #### b. Configuration management
 - **About Github**:
@@ -173,6 +173,7 @@ Setup.py commands:
 - **I have learned much during the work**. For examples: I understand a lite bit why our teacher asked us to do that:
    + a container based platform, with separate containers for BurgerOrderer, KitchenView, and MenuStore => to manage code easier and it is the reason why we need to learn how to use Docker-compose.
    + using docker and requirements => to ensure the user environment is consistent with the environment in which we build the product.
+   + using setup.py (like package.json in Java and Javascript) som a external library.
 - **Short summary of what I have implemented:**
    + _The project as a whole_: I and my team work together to build two web clients that customer can order burger and people in kitchen can see the burger orders, and a database that contains information about each type of goods.
    + _Each container, each module_. What are they used for? You can know about it when you see our project's tree:
@@ -222,11 +223,10 @@ Containers: Our project, of course
            + We have list types of burgers and options can see all different type as retreived from the MenuStore database. Our database is full of information, defining the types of coponents and the relationships betwwen them.
            + User can search database MenuStore contains infomation about the different type of goods and is being used by BurgerOrderer.
            + Customers can order burger, add or remove items, get the choice of options and drink. Then the order will be sent to database.  Order id is automatically numbered with function lastrowid.
-           + KitchenView receives the orders, prints them and can delete them. When user delete orders in KitchenView, all information of order will be removes in database.
+           + KitchenView receives the orders, prints them and can delete them. When user delete orders in KitchenView, all information of order will be removed in database.
            + Use many try-except to catch and show errors. Customers can return to the main screen from the error screen and re-excute the transaction, the program is not interrupted.
    + **What did not go well?**
-      + Most of our code was collected from many sources, under our efforts to learn, but there were still may limitations. Therefore, our code maybe has many duplicates, redundancies, omissions and imperfections. Howerver, we tried to do is as best as we could.
-      + We only use REST API a little bit to collect orders. The rest, we use Jinja2 instead.
+      + Most of our code was collected from many sources, under our efforts to learn, but there were still may limitations. Therefore, our code maybe has many duplicates, redundancies, omissions and imperfections. Howerver, we tried to do the best we could.
       + We don't have a good process, the division of work is not clear, so there is a lot of duplication. It took times but the efficiency was not high.
    + **How did you solve your challenges? What could you have done differently**?
       + The first challenge was that we had just started learning python when the project started. There was one team member who knew CSS and HTML. So it took us very long time to figure out what to do. Since we did not know where to start, we just coded the same functions at the same time. Then we showed it to each other and chose the best on to work on. This made the project progress very slow but we learned a bit more.
@@ -234,7 +234,7 @@ Containers: Our project, of course
       + When we finished version 2, we had to run two applications on two different text-based interfaces (iTerm and Terminal). Then we learned about Docker.
       + Finally is database. We chose SQLite instead of NoSQL because it gave us chance to pratice with database before the following courses. We spent a lot of time figuring out how many tables we needed, what the relationships were between the columns in the tables, and what joins commands we needed to use. It'difficult and confusing during working with database so we used many times command app.logger.info to print data and edited it to fit our needs.
    + **What did you not manage to solve? Why not?**
-      + We understod that it was not mandatory to use REST API completely for the whole project, so we used Jinja2 instead. It's much more familiar, convenient and easty to learn and use for newbies like us. But we will learn about REST APT after this course.
+      + We understod that it was not mandatory to use REST API completely for the whole project, so we use REST API to collect orders, the rest, we use Jinja2 template. It's much more familiar, convenient and easty to learn and use for newbies like us. But we will learn more about REST APT after this course.
       + There are many things we wrote that are not complete, I will come back to this exercise when I know more about programming. I guess that it will be intresting to see the lines I have coded nowaday.
       + The process. We did not have a good process. In the next project, we need to pay more attention to establishing the implementation process before starting to work.
 - **My experiences of working with containers**.
@@ -244,12 +244,12 @@ Containers: Our project, of course
    + **What did not go well**?
         + Like I wrote above, we are new developers so out code still has many problem.
    + **How did you solve your challenges? What could you have done differently**?
-      + The challenge was when the app.py files were located in two different forders and database was in MenyStore. We found a way to create vitual databases in BurgerOrderer and KitchenView and built docker images, created an automate.sh file to run one command for all. However, the problem was that the path to each person's file database was different so it did not work as we expected. We were instructed by the teacher to use docker-compose. It worked.
+      + The challenge was when the app.py files were located in two different folders and database was in MenyStore. We found a way to create vitual databases in BurgerOrderer and KitchenView and built docker images, created an automate.sh file to run one command for all. However, the problem was that the path to each person's file database was different so it did not work as we expected. We were recommended by the teacher to use docker-compose. It worked.
    + **What did you not manage to solve? Why not**?
       + We tried out best to complete the assignment with the best quality with our current level. Some functions we have thougt of but dare nor risk implementing when the time for the project was not much. We may come back and implement it after this course.
 #### d. Testing and debugging
 - **Test**: I use Pytest to test with some functions som contact to the database:
-      + 4 test with database: I sat up a function to connect to the database in an other forder: def db_connection(), then tested if a table exist/not exist in database and test to create and drop a table in database.
+      + 4 test with database: I sat up a function to connect to the database in an other folder: def db_connection(), then tested if a table exist/not exist in database and test to create and drop a table in database.
       + 2 test with BurgerOrderer: tested function select_a_column and function index in BurgerOrderer. I used the relative path from the BurgerOrderer folder to MenuStore during this test.
 ```
      db_path = os.path.join(os.path.dirname(__file__), '..', 'MenuStore', 'orders.db')
@@ -259,16 +259,16 @@ Containers: Our project, of course
     con.close()
 ```
 
-   + All my test failed in the beginning because I did not set up a function to connect to the database (with 4 test) and did not use the relative path from the BurgerOrderer forder to MenuStore (with 2 test). But they were all pass after I edited the codes.
+   + All my test failed in the beginning because I did not set up a function to connect to the database (with 4 test) and did not use the relative path from the BurgerOrderer folder to MenuStore (with 2 test). But they were all pass after I edited the codes.
       + **What went well**: I know how to use Pytest and could write a few test case.
       + **How did you solve your challenges? What could you have done differently?**
          + Our functions are grouped quite a lot so testing is also more difficult. I have splitted the function to make it easier to test and I could write two test with BurgerOrderer because of it.
       + **What did you not manage to solve? Why not?**
          + We started with assignment 3 very late. The time was too urgent so I could not perform as many test cases as expected. In the next project, we had to adjust the time estimate.
          + I wanted to test creating and sending orders to the database but out order_id is automatically generated, so I had not dared to try, afraid of conflicts.
-         + My test in BurgerOrderer are all hard-code tests. It the user changes the details in database, my tests are no longer valid. I still do nor know if there is a way to fix these things.
+         + My test in BurgerOrderer are all hard-code tests. It the user changes the details in database, my tests are no longer valid. I still do not know if there is a way to fix these things.
 - **Debugging**:
-   + I ran  "run and debug" in VS code everytime I done something new, tried to understand the error message, found fail and fixed it. It became useful tool for me mostly when I started coding individual python files, especially when I "step into" and follow the changing values of variables, functions to find the error. But it became harder when we had a database and slited two applications into two separate containers. I use logger instead to print everything out to localize and find the error.
+   + I ran  "run and debug" in VS code everytime I done something new, tried to understand the error message, found bugs and fixed it. It became useful tool for me mostly when I started coding individual python files, especially when I "step into" and follow the changing values of variables, functions to find the error. But it became harder when we had a database and slited two applications into two separate containers. I use logger instead to print everything out to localize and find the error.
    + Besides that, I use try-except to catch the fail and avoid program interruption. It's also very helpful.
    + **Debug sections**: 
       + I did not update debug sections before October 2.
@@ -278,7 +278,7 @@ Containers: Our project, of course
 c.execute("INSERT INTO orders (order_number, burger, added_items, removed_items, added slides, drinks) VALUES (?, ?, ?, ?, ?, ?)")
 sqlite3.OperationalError: near "slides": syntax error
 - Debug Session: Checked the def index in BurgerOrderer
-- Solution:
+- Solution: syntax error. I did not have any variable "add slides" in my code and we do not assign a variable with white space in Python.
 - Edit "add slides" to "add_slides", now works.
 - References:
 ```
@@ -290,9 +290,9 @@ Execution finished with errors.
 Result: unrecognized token: ""REMOVE"
 At line 1:
 INSERT INTO items VALUES (21, "Not remove any items", "ITEMS",
-- Debug Session: Checked the def index in BurgerOrderer
-- Solution: Edit "insert to" to "insert inte", now works.
-- References: https://www.sqlitetutorial.net/sqlite-insert/
+- Debug Session: Checked the def done in BurgerOrderer
+- Solution: change the double quotes (") to single quotes (') with string
+- References: https://www.sqlite.org/quirks.html#double_quoted_string_literals_are_accepted
 ```
 ```
 - October 2, 2024
@@ -302,23 +302,23 @@ Execution finished with errors.
 Result: near "to": syntax error
 At line 1:
 insert to
-- Debug Session: Checked the def index in BurgerOrderer
-- Solution: change the double quotes (") to single quotes (') with string
-- References: https://www.sqlite.org/quirks.html#double_quoted_string_literals_are_accepted
+- Debug Session: Checked the def done in BurgerOrderer
+- Solution: Edit "insert to" to "insert into", now works.
+- References: https://www.sqlitetutorial.net/sqlite-insert/
 ```
 ```
 - October 2, 2024
 - Problem: werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand. KeyError: 'burger'
 - Debug Session: Checked the def topping in BurgerOrderer
 - Solution: my code is attempting to access a key ('burger') in the request.form object that does not exist. Change "request.form['burger]" to "request.form.get('burger')
-- References:
+- References: https://stackoverflow.com/questions/60599763/werkzeug-exceptions-badrequestkeyerror-400-bad-request-the-browser-or-proxy
 ```
 ```
 - October 7, 2024
 - Problem: jinja2.exceptions.TemplateNotFound: error.html
 - Debug Session: Checked the def topping in BurgerOrderer
 - Solution: My Flask application is trying to render an error.html template, but it cannot find that file in my templates directory. I created an error.html file inside the template ditectory and now it works.
-- References:
+- References: https://medium.com/@rakesh0651/templatenotfound-5b61e8a7ecd5
 ```
 ```
 - October 7, 2024
