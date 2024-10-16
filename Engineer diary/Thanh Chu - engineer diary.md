@@ -249,8 +249,8 @@ Containers: Our project, of course
       + We tried out best to complete the assignment with the best quality with our current level. Some functions we have thougt of but dare nor risk implementing when the time for the project was not much. We may come back and implement it after this course.
 #### d. Testing and debugging
 - **Test**: I use Pytest to test with some functions som contact to the database:
-      + 4 test with database: I sat up a function to connect to the database in an other folder: def db_connection(), then tested if a table exist/not exist in database and test to create and drop a table in database.
-      + 2 test with BurgerOrderer: tested function select_a_column and function index in BurgerOrderer. I used the relative path from the BurgerOrderer folder to MenuStore during this test.
+   + 4 test with database: I sat up a function to connect to the database in an other folder: def db_connection(), then tested if a table exist/not exist in database and test to create and drop a table in database.
+   + 2 test with BurgerOrderer: tested function select_a_column and function index in BurgerOrderer. I used the relative path from the BurgerOrderer folder to MenuStore during this test.
 ```
      db_path = os.path.join(os.path.dirname(__file__), '..', 'MenuStore', 'orders.db')
     con = sqlite3.connect(db_path)
