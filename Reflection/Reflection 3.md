@@ -14,6 +14,10 @@ https://github.com/HaileyLV/PA1489-project.git
 - **Test**: We use Pytest to test with some functions som contact to the database.
 ### *3.2. Short summary of how we have completed the test:*
 - All our test failed in the beginning because we did not set up a function to connect to the database (with 4 test) and did not use the relative path from the BurgerOrderer folder to MenuStore (with 2 test). Though, everything passed after we edited the codes.
+  
+- Testing was challenging because the database was not directly accessible in the kitchen view and order components. The database was set up as a Docker volume, which made it difficult to test any functionality that depended on it. Moving forward, it would be better to mock the database instead of using the real one. By doing this, we can control what data is in the database, making sure that tests are always consistent and reliable.
+For example, when testing a function that retrieves data, using the real database can lead to unpredictable results since the data may change between test runs. Mocking allows us to define exactly what data is available during a test, which eliminates the variability and ensures that tests always run under the same conditions.
+
 ### *3.3. Printout from your last test session, so you can see:*
 - How many tests you have written: 6 tests
 - What they test:
