@@ -26,32 +26,32 @@ Debugging was a learning process where we not only solved a technical problem bu
 #### Week 35:
 ###### I had no idea what to do, everything was unclear for me.
 #### Week 36:
-###### Task 1: Started learning about Flask, Git, and GitHub
-###### Task 2: continuation with Githubb: learned about how to make a Repository.
-###### Task 3: continuation with Githubb: how to commit, how to save changes
+###### Task 1: Started learning about Flask, Git, and GitHub (03/09/24)
+###### Task 2: continuation with Githubb: learned about how to make a Repository (05/09/24)
+###### Task 3: continuation with Githubb: how to commit, how to save changes (07/09/24)
 
 #### Week 37:
-###### Task 1: continuation with Flask: Learned about Flask and how to use it.
-###### Task 2: Started learning about HTML and CSS.
-###### Task 3: Implemented the burger customization feature: I made a BurgerOreder application, a user could order a burger and send it to the kitchen and you could see it on the KitchenView page. Created HTML templates for the burger ordering interface. Conducted a code review session with the team.
+###### Task 1: continuation with Flask: Learned about Flask and how to use it. (09/09/24)
+###### Task 2: Started learning about HTML and CSS. (10/09/24)
+###### Task 3: Implemented the burger customization feature: I made a BurgerOreder application, a user could order a burger and send it to the kitchen and you could see it on the KitchenView page. Created HTML templates for the burger ordering interface. Conducted a code review session with the team. (14/09/24)
 
 #### Week 38:
-###### Task 1: Worked with KitchenView to display orders.
-###### Task 2: Started learning about databases (Docker Compose, SQLite ...)
-###### Task 3: Updated the documentation for the project.
+###### Task 1: Worked with KitchenView to display orders.(16/09/24)
+###### Task 2: Started learning about databases (Docker Compose, SQLite ...) (17/09/24)
+###### Task 3: Updated the documentation for the project. (20/09/24)
 #### Week 39:
-###### Task 1: Collaborated with team members on the design of the pages
-###### Task 2: Conducted user tests of the interface for ordering burgers.
-###### Task 3: Fixed bugs discovered during user testing.
+###### Task 1: Collaborated with team members on the design of the pages (23/09/24)
+###### Task 2: Conducted user tests of the interface for ordering burgers. (25/09/24)
+###### Task 3: Fixed bugs discovered during user testing. (27/09/24)
 #### Week 40:
-###### Task 1: Implemented the menu management system.
-###### Task 2: Integrated the menu management with the database.
-###### Task 3: Fixed debug and changed template structures on VS code.
+###### Task 1: Implemented the menu management system. (01/10/24)
+###### Task 2: Integrated the menu management with the database. (02/10/24)
+###### Task 3: Fixed debug and changed template structures on VS code. (02/10/24)
 #### Week 41:
-###### Task 1: Improved the performance of database queries.
-###### Task 2: Worked on deploying the application using Docker.
-###### Task 3: Collaborated with team members on the assignments.
+###### Task 1: Improved the performance of database queries. (08/10/24)
+###### Task 2: Worked on deploying the application using Docker. (10/10/24)
+###### Task 3: Collaborated with team members on the assignments. (14/10/24)
 #### Week 42:
-###### Task 1: Collaborated with team members on the assignments.
-###### Task 2: Completed the application features. 
-###### Task 3: Performed final code review and merged branches.
+###### Task 1: Collaborated with team members on the assignments. (16/10/24)
+###### Task 2: Completed the application features. (16/09/24)
+###### Task 3: Performed final code review and merged branches. (17/10/24)
