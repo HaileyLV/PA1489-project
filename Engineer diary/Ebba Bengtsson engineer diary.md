@@ -1,35 +1,21 @@
-1. Weekly Report
-   
+1. Weekly Report 
 - what i learned
-  
 - meetings
-  
 - what i did
-
 
 2.What I learned, in more detail:
 
-- github
-- 
--html and css
-
--python in a working invierment
-
-- flask app
-  
--adminer
-
--id
-
--session
-
-- running your app
-  
--docker file docker compose 
-
--debugging
-
--mock
+ * github
+ * html and css
+ * python in a working invierment
+ * flask app
+ * adminer
+ * id
+ * session
+ * running your app
+ * docker file docker compose
+ * debugging
+ * mock
 
 3. what i thought about the project:
    
