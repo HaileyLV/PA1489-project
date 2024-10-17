@@ -1,4 +1,4 @@
-# **In this text I'll be updating progress, problems I've encountered and solutions along with other things I've learned in this course.**
+# **My Engineering Diary**
 
 ## Things I've done weekly
 - I have tried my best to read up on everything that has been done within the project.
@@ -10,7 +10,8 @@
 - Text is divided into two parts
     1. My work throughout the weeks
     2. Thoughts about the project and how it went
-
+  
+**I'll be updating progress, problems I've encountered and solutions along with other things I've learned in this course.**
 
 ## 1. My work throughout the weeks
 #### Week 35 and 36: 
