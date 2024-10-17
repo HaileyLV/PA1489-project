@@ -1,7 +1,7 @@
-1. Weekly Report 
-- what i learned
-- meetings
-- what i did
+1. Weekly Report
+ * what i learned
+ * meetings
+ * what i did
 
 2.What I learned, in more detail:
 
@@ -19,14 +19,13 @@
 
 3. what i thought about the project:
    
-- what went well
-  
-- what went less well
-  
-- Next time
+ * what went well
+ * what went less well
+ * Next time
 --------------
 
-v.35 walk-through:
+v.35 
+walk-through:
 For the upcoming two weeks, we’ve been instructed to complete the following tasks:
 
 * Form a group of 3 to 5 members.
@@ -37,9 +36,8 @@ as the group needs to have at least three people.
 
 Additionally, I’ve set up my computer for the course and created a GitHub account to manage our projects.
 
-36 
-
-            This Week's Progress:
+v.36 
+This Week's Progress:
 
 We found three more people who needed a group, so we formed a team of five members.
 
@@ -59,17 +57,15 @@ Choices: Ebba & Hailey
 Sides: Wilma
 Kitchen View: Sabor, Thanh
 
-
-37-38
-
-v37
+v.37-38
+v.37
             What i learned:
 I gained knowledge in using Markdown, App.Moqups, Flask and branches.
 started to look att html and css.
 
 I also learned about essential tools and resources, such as GitHub, that are crucial for the project.
 
-            WHat happen in the group:
+   WHat happen in the group:
 
 Our group agreed to use Python as our programming language, VS Code as the development environment, and GitHub for version control. 
 These decisions could be changed.
@@ -82,12 +78,12 @@ In our Discord group, one member suggested changing our approach to task divisio
 preferring that we work on everything together. 
 I proposed that we discuss this further as a team during our next meeting.
 
-            Learn:
+ What i did:
 Learn about Flask and download the software.
 Practice pulling and pushing data from each person's computer to Github. (created my own github project so i would not disturb our project)
 Code BurgerOrderer and KitchenView
 
-v38
+v.38
             What happen in the group:
 
 At our next meeting, I found out that two group members had already completed most of the burger-order section, even though we hadn’t agreed to start yet. 
