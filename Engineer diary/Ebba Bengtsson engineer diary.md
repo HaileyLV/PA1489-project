@@ -46,19 +46,26 @@ We found three more people who needed a group, so we formed a team of five membe
 
 To stay in touch, I created a group on Discord for easy communication.
 
+
 Meeting 1:
 
 In our first meeting, we introduced ourselves and got to know each other a bit. 
 Hailey set up a project on GitHub and shared it with everyone for collaboration.
 
 Project Task Distribution:
+
 We decided to divide the project into the following sections:
 
 Main Menu: Sabor
-Burger Order:
+
+Burger Order
+
 Hamburger: Thanh
+
 Choices: Ebba & Hailey
+
 Sides: Wilma
+
 Kitchen View: Sabor, Thanh
 
 v.37-38
@@ -72,10 +79,12 @@ started to look att html and css.
 
 I also learned about essential tools and resources, such as GitHub, that are crucial for the project.
 
+
  * What happen in the group:
 
 Our group agreed to use Python as our programming language, VS Code as the development environment, and GitHub for version control. 
 These decisions could be changed.
+
 
 meeting 2:
 
@@ -85,6 +94,7 @@ as we didn’t have enough information to start the main project.
 In our Discord group, one member suggested changing our approach to task division, 
 preferring that we work on everything together. 
 I proposed that we discuss this further as a team during our next meeting.
+
 
  * What i did:
    
@@ -103,20 +113,28 @@ They suggested I work on adding a feature to remove items from the burger.
 I spent the next week preparing my own GitHub solution to demonstrate how we could implement it. 
 However, when they showed their progress at the next meeting, they had already completed the task.
 
+
 what I have done in my Burger-app:
 
 made a running website. 
+
 Used wsl, html and pip flask.
+
 python def
+
 litle bit of dockerfile 
+
 
  * What i did:
             
 how to get github to terminal:
+
 ssh key
 
 git init -> Initialize a local Git repository
+
 git clone <git@github.com:HaileyLV/PA1489-project.git> Creat a local copy on your computer. 
+
 Read more: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ----
@@ -165,7 +183,7 @@ git stash -> Stash the changes in a dirty working directory away. Link: https://
 
 git fetch -> Stash the changes in a dirty working directory away. Link: https://git-scm.com/docs/git-stash
 
-git stash pop -> Apply the changes as well as remove stored files from stash area.. Link: https://git-scm.com/docs/git-stash _(then check git status och use git add, git commit -m, git push origin...) _
+      git stash pop -> Apply the changes as well as remove stored files from stash area.. Link: https://git-scm.com/docs/git-stash _(then check git status och use git add, git commit -m, git push origin...) _
 ---
 
 commands for project:
@@ -175,9 +193,15 @@ touch <file name] -> Create a python file (on local)
 mkdir <folder name] -> Create a folder (on local)
 
 Set up Github for terminal use:
+
 Set up a SSH key:
-In the terminal, type the following command, replacing youremail@example.com with your email address (the same one you use for GitHub):
+
+In the terminal, type the following command, replacing youremail@example.com with your email address (the 
+
+same one you use for GitHub):
+
 ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+
 
 In order for your SSH key to be used automatically by Git, you need to add it to your SSH agent.
 Start SSH-agent-> 
