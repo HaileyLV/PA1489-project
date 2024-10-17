@@ -25,7 +25,9 @@
 --------------
 
 v.35 
-   walk-through:
+
+walk-through:
+
 For the upcoming two weeks, we’ve been instructed to complete the following tasks:
 
 * Form a group of 3 to 5 members.
@@ -37,6 +39,7 @@ as the group needs to have at least three people.
 Additionally, I’ve set up my computer for the course and created a GitHub account to manage our projects.
 
 v.36 
+
 This Week's Progress:
 
 We found three more people who needed a group, so we formed a team of five members.
@@ -44,6 +47,7 @@ We found three more people who needed a group, so we formed a team of five membe
 To stay in touch, I created a group on Discord for easy communication.
 
 Meeting 1:
+
 In our first meeting, we introduced ourselves and got to know each other a bit. 
 Hailey set up a project on GitHub and shared it with everyone for collaboration.
 
@@ -58,19 +62,23 @@ Sides: Wilma
 Kitchen View: Sabor, Thanh
 
 v.37-38
+
 v.37
-            What i learned:
+
+ * What i learned:
+            
 I gained knowledge in using Markdown, App.Moqups, Flask and branches.
 started to look att html and css.
 
 I also learned about essential tools and resources, such as GitHub, that are crucial for the project.
 
-   WHat happen in the group:
+ * What happen in the group:
 
 Our group agreed to use Python as our programming language, VS Code as the development environment, and GitHub for version control. 
 These decisions could be changed.
 
 meeting 2:
+
 This week, we decided to focus on learning Python, 
 as we didn’t have enough information to start the main project.
 
@@ -78,13 +86,15 @@ In our Discord group, one member suggested changing our approach to task divisio
 preferring that we work on everything together. 
 I proposed that we discuss this further as a team during our next meeting.
 
- What i did:
+ * What i did:
+   
 Learn about Flask and download the software.
 Practice pulling and pushing data from each person's computer to Github. (created my own github project so i would not disturb our project)
 Code BurgerOrderer and KitchenView
 
 v.38
-            What happen in the group:
+
+ * What happen in the group:
 
 At our next meeting, I found out that two group members had already completed most of the burger-order section, even though we hadn’t agreed to start yet. 
 Our original plan was to wait another week so we could gather enough information to work on the burger-order together.
@@ -94,13 +104,14 @@ I spent the next week preparing my own GitHub solution to demonstrate how we cou
 However, when they showed their progress at the next meeting, they had already completed the task.
 
 what I have done in my Burger-app:
+
 made a running website. 
 Used wsl, html and pip flask.
 python def
 litle bit of dockerfile 
 
-v37 -38
-            What i did:
+ * What i did:
+            
 how to get github to terminal:
 ssh key
 
@@ -108,7 +119,10 @@ git init -> Initialize a local Git repository
 git clone <git@github.com:HaileyLV/PA1489-project.git> Creat a local copy on your computer. 
 Read more: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
+----
+
 Github command:
+
 git checkout -b <branch's name> creat a branch or move to the branch
 
 git checkout - jump between two branches
@@ -152,9 +166,10 @@ git stash -> Stash the changes in a dirty working directory away. Link: https://
 git fetch -> Stash the changes in a dirty working directory away. Link: https://git-scm.com/docs/git-stash
 
 git stash pop -> Apply the changes as well as remove stored files from stash area.. Link: https://git-scm.com/docs/git-stash _(then check git status och use git add, git commit -m, git push origin...) _
-
+---
 
 commands for project:
+
 touch <file name] -> Create a python file (on local)
 
 mkdir <folder name] -> Create a folder (on local)
@@ -194,6 +209,7 @@ To clone a repository, use SSH-link instead of HTTPS:
 git clone git@github.com:username/repository.git
 
 Github:
+
 Set the SSH keys to Github. Come to Settings -> SSH and GPG key Link https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account and https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 You only need one SSH-key, so you probably only need to do this once.
