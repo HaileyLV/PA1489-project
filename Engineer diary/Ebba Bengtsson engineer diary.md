@@ -183,8 +183,9 @@ git stash -> Stash the changes in a dirty working directory away. Link: https://
 
 git fetch -> Stash the changes in a dirty working directory away. Link: https://git-scm.com/docs/git-stash
 
-      git stash pop -> Apply the changes as well as remove stored files from stash area.. Link: https://git-scm.com/docs/git-stash _(then check git status och use git add, git commit -m, git push origin...) _
----
+git stash pop -> Apply the changes as well as remove stored files from stash area.. Link: https://git-scm.com/docs/git-stash _(then check git status och use git add, git commit -m, git push origin...) _
+
+----
 
 commands for project:
 
@@ -204,55 +205,83 @@ ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 
 
 In order for your SSH key to be used automatically by Git, you need to add it to your SSH agent.
+
 Start SSH-agent-> 
+
 eval "$(ssh-agent -s)"
 
 Add your SSH key to the SSH agent: 
+
 ssh-add ~/.ssh/id_rsa
 
 Copy the public SSH-key and add it to GitHub.
+
 cat ~/.ssh/id_rsa.pub
+
 Copy the entire key showing in terminal.
 
 Go to GitHub:
+
 Log in on your GitHub-account.
+
 Go to SSH and GPG keys- settings.
+
 Click on New SSH key.
-Give key a name (example "My computer (lenovo)") and paste the key you copied from the terminal into the Key field.
+
+Give key a name (example "My computer (lenovo)") and paste the key you copied from the terminal into the 
+
+Key field.
+
 Click Add SSH key.
-(now you have added your own specified code, 
-that acts like a log in for when you work in a project.
+
+(now you have added your own specified code, that acts like a log in for when you work in a project.
 It is to know that you are you when you commit things in a project at Github.)
 
 To test if it worked:
+
 ssh -T git@github.com
+
 if correct set up: Hi username! You've successfully authenticated, but GitHub does not provide shell access. (in terminal)
 
-Now you can clone, push and pull via SSH. 
+Now you can clone, push and pull via SSH.
+
 To clone a repository, use SSH-link instead of HTTPS:
+
 git clone git@github.com:username/repository.git
 
 Github:
 
-Set the SSH keys to Github. Come to Settings -> SSH and GPG key Link https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account and https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+Set the SSH keys to Github. Come to Settings -> SSH and GPG key Link 
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account and https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 You only need one SSH-key, so you probably only need to do this once.
 
+----
+
 install Flask using the following command in terminal:
+
 pip install Flask
+
 Verify the Installation:
+
 python -m flask --version
-Learn about Flask and download the software. Link: https://flask.palletsprojects.com/en/3.0.x/installation/.
+
+Learn about Flask and download the software. Link: 
+
+https://flask.palletsprojects.com/en/3.0.x/installation/.
 
 How i learn about flask: 
 Learn about Flask commands to create a simple application. Link: https://www.geeksforgeeks.org/flask-creating-first-simple-application/
+
 -----
 
 v.39
-            learned:
+ * learned:
+   
 Learn about Flask. Link: https://www.geeksforgeeks.org/flask-creating-first-simple-application/
-Code BurgerOrderer and KitchenView, write documents.
-docker file, database. 
+
+and docker file, database. 
 
             what happen in the group:
 
@@ -281,118 +310,139 @@ Committed my burger ordering application to the group repository so everyone cou
 
 Provided insights on how I created the Dockerfile and implemented the database, offering guidance to others.
 
-We have two different versions:
-Version 1
-
-Orders are saved using buttons, recorded instantly with no option to change choices.
-
-Navigation between BO (Back Order) and KT (Kitchen) is possible via "Go to kitchen" and "Back to order" links. BO and KT are parts of the same program.
-
-Kitchen receives all orders as an unnumbered list.
-
-Kitchen can clear all orders but not individual ones.
-
-Product design will change to make add_items and remove_items attributes of the burger.
-
-Version 2
-
-Uses checkboxes to let users make temporary selections.
-
-Orders are saved only when "Order Now" is clicked, allowing changes beforehand.
-
-BO and KV are separate programs pointing to the same database (currently hardcoded, incomplete).
-
-Orders are managed by customer name (needs testing for handling duplicate names).
-
-
-            What i did:
+ * What i did:
+   
 Download flask-menu:
+
 pip install Flask-Menu
+
 Verify the Installation:
+
 pip list | grep Flask-Menu
+
 if correct-> Flask-Menu (0.7)
 
 Download and use FLask-Menu to code. Link https://flask-menu.readthedocs.io
+
 ----
+
 Install Docker:
+
 sudo apt-get update
+
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
 Download and try to learn how to use Docker Desktop. Link https://www.docker.com/products/docker-desktop/
 
 Install Docker Desktop (windows):
+
 Invoke-WebRequest -Uri https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe -OutFile DockerDesktopInstaller.exe
 
 Docker commands:
+
 docker build -t <image's name>: . -> Build dockers images. Best att use ex: customer: lastest'for the images name and version
+
 docker images -> Show all images
+
 docker run -d --name -p <image's name>: -> run the docker image
 
 running container stop or start:
+
 docker stop adminer
+
 docker start adminer
+
 ----
 
 v40
-            learn:
+
+ * learn:
+   
 the difference between Dockerfile and Docker Compose.
+
 -> If you have downloaded Docker, Docker Compose is included automatically, so no additional downloading is needed.
+
 Adminer ->allows you to access your database and make changes there.
+
 learned about Virtual machine and adminer
 
-            What happen in the group:
+ * What happen in the group:
 Assembled and tested the product for the first time.
+
 Coded MenuStore and documented its functionality.
-Practice:
-Did not finish MenuStore. Need to learn more about Docker Compose and databases.
-No testing or bug fixes completed.
 
 Meeting 3:
+
 We agreed to transition to Docker Compose.
 Each team member will research the implementation process at home.
 
 what i did on my Burger order:
+
 change my burger-order docker file to a docker compose. 
 This was because with a docker compose file you can run through all 3 docker files. 
 with docker file you need to open up all there every time. With compose it just runs a lot smother.
 Moved the database to a different map.
+
 Created a kitchen view (still needs improvement).
 
-            What i did:
+ * What i did:
 
 Download Adminer with docker:
+
 docker run --name adminer -d -p 8080:8080 adminer -> 8080 web place.
+
 Access Adminer in your browser: Open your browser and navigate to http://localhost:8080.
 
+
 running container stop or start:
+
 docker stop adminer
+
 docker start adminer
 
+
 run docker compose: 
+
 docker-compose up -> runs the services using existing images/containers.
+
 docker-compose up --build --force-recreate -> rebuilds images and recreates all containers, regardless of changes.
+
 ----
 
 v41
-            learn:
+
+ * learn:
+            
 Adminer dose not work for sqlite3 (need to fiend a way)
 
 
-            What happen in the group:
+ * What happen in the group:
+            
 fiend away to make adminer work. 
+
 Read about debugging and start doing a python test. 
 
+
 what i did on my Burger order:
+
 Finish with database and Docker-compose file.
+
 started doing python tests and debugging.
+
 Put in a error web site in docker compose file. 
+
 fixed a list for my burger-order so I can add more burgers if i want to the order.
 
+
 Id for orders:
+
 used ->unique_id = str(uuid.uuid4()) 
+
 generates a unique string using a random UUID (version 4). 
 It's used to create secure and unique identifiers.
 
 Added session instead of a list:
+
 session is better than a list in Flask because it manages data per user instead of globally, is more secure (encrypted), saves server memory, and maintains user data across different requests. 
 A list shares data between all users and is less secure.
             
@@ -403,61 +453,82 @@ Read about "Testing Flask Applications with pytest" and try implementing it on y
 Our initial focus will be to test whether the input data from the order page is correctly sent to the kitchen view.
 
 ----
+
 SQLite commands:
 
 CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);
+
 ->
 Create a table named test, if it was not exists in database with two elements: id and name.
 
 DROP TABLE IF EXISTS test; -> Drop a test table if it was exists in database
 
 SELECT name FROM sqlite_master WHERE type = 'table' AND name='test';
+
 ->
 Check the positions of table if it exists in database. Returns None if the table does not exist in the database
 
 select * from burger b join order_burger ob on b.id = ob.burger_id join orders o on ob.order_id = o.id join items i on ob.items_id = i.id where o.id = ?
+
 ->
 Join data in table burger with tabler order_burger, table items with table order_burger based on burger_id, order_id, items_id
 
 INSERT INTO burger (id, name) VALUES (1, "cheese burger")
+
 ->
 Insert a row in table burger with two elements: id = 1 and name = cheese burger
 
 ('SELECT id FROM items WHERE name = ? AND type = ? AND action = ?',(item_name, item_type, action))
+
 ->
 pull data of item_name, item_type, action based on items_id
 
 ('INSERT INTO order_burger (order_id, burger_id, items_id) VALUES (?, ?, ?)',(order_id, burger_id, item_id))
+
 ->
 insert input data to database
 
 with sqlite3.connect('orders.db') as conn:...
+
 ->
 use this code to open database so that database will be closed outside "with"
+
 ----
 
 v42
-            learn:
+
+ * learn:
 How to do a pytest for debugging.
+
 How to use mock. 
 
-            What happen in the group:
+
+ * What happen in the group:
+            
 we decided to meet up and write the last part of the projects. 
+
 fixed all writing assignments.
+
 Last touches on ower burger order. 
 
 what i did on my Burger order:
-changed adminer to SQLite Web because its specifically made for managing SQLite databases only. Np need for login.
-Added test map for all test files
+
+changed adminer to SQLite Web because its specifically made for managing SQLite databases only. No need for login.
+
+Added test map for all test files.
+
 made test for kitchen and order.
+
 used mockup for kitchen.
 
-            What i did:
+
+ * What i did:
 
 Use pytest to test and debug: link: https://docs.pytest.org/en/stable/getting-started.html
 A test function start with "test"
 
 group project: 
+
 Testing was particularly challenging because the database was not directly accessible in the kitchen view and order components. 
 The database was set up as a Docker volume, which made it difficult to test any functionality that depended on it. 
 Moving forward, it would be better to mock the database instead of using the real one. 
@@ -467,16 +538,22 @@ For example, when testing a function that retrieves data, using the real databas
 Mocking, on the other hand, allows us to define exactly what data is available during a test. 
 This eliminates the variability and ensures that tests always run under the same conditions, providing more stable and trustworthy results.
 
-mockup on my own project: 
+mockup on my own project:
+
 I initially tried using a mockup, but the test didn't work as expected, so I switched to Magic Mockup.
 The difference between a mockup and Magic Mockup is:
+
 Mockup: A manually created static design used to visualize a product.
+
 Magic Mockup: An automated tool that makes it easy to place your design into realistic scenes.
+
 ----
 
-            What I learned, in more detail:
+ * What I learned, in more detail:
 
-Github:
+ 
+* Github:
+
 I successfully tracked changes and coordinated efforts using GitHub. 
 While I’m not yet fully proficient, I learned enough commands to support the project. 
 GitHub proved to be a powerful tool, not only for version control but also for collaboration, automation, security, and project management. 
@@ -487,7 +564,8 @@ It’s a popular, free platform that supports collaborative development with fea
 I used Markdown extensively for various files like readme, planning, and reflections. 
 Recommended by our teacher, Markdown is a lightweight, easy-to-read language that integrates well with GitHub, making it easier to maintain clear project documentation such as README files and engineering notes.
 
-about branches:
+ * about branches:
+
 A branch is for project/ work where more then one is working on the project. Its to make it easier for the group to work on the project together.
 Usually one or two people works on one branch with one specific part of the project. When that part is completed you can send a request for the other people in the group
 to check if they think it looks good and everything works together. After that you can push the branch to main without having any problems that it dose not fit in with the other work.
@@ -496,14 +574,18 @@ If you don't have a branch´s, its can be complected to push what you have done 
 Sometimes maybe two people have done the same thing. 
 
 
--html and css:
+ * html and css:
+
 HTML (HyperText Markup Language) is the standard for creating and structuring web pages and their content. 
+
 By using HTML, developers can describe different elements of the page, such as headings, paragraphs, links, images, and forms. 
+
 HTML is the foundation of all web pages and defines how the browser should display the content to the user.
 
 HTML provides the structure and content of the page, while CSS gives it its presentation and layout.
 
 HTML uses a system of tags (<>), which surround different parts of the content to define their purpose or type. 
+
 For example,  is used for headings,  for paragraphs, and  for links. Together with CSS and JavaScript, HTML provides structure, design, and interactivity to web pages.
 
 In summary, HTML is the building block of the web, allowing us to create organized and functional pages for all kinds of purposes, 
@@ -511,10 +593,13 @@ from simple informational pages to complex web applications.
 
 To create a well-designed homepage, I used ChatGPT extensively to shape the basic structure. 
 Then, I modified and added my own pages. I used the homepage that ChatGPT helped me create as inspiration. 
+
 Additionally, I used their official website to add all the small operational elements, such as buttons and links. HTML provided the structure and content for the page, while CSS was used to create an attractive presentation and layout.
 
 I chose to use CSS to control the look and feel of the website because it allows me to style HTML elements and create a visually appealing design. 
+
 With CSS, I can easily define layout, colors, fonts, and spacing to make the site more attractive and user-friendly. 
+
 It also helps ensure the site looks good across different devices by making it responsive. 
 By separating the content from the presentation, CSS keeps the code clean and easy to maintain.
 
@@ -522,42 +607,44 @@ By separating the content from the presentation, CSS keeps the code clean and ea
 -python in a working invierment 
 
 
-- flask app:
+ * flask app:
+   
 Flask is a simple tool for building web apps with Python. I use it to quickly create websites and APIs. 
 It's easy to work with and gives me full control over how the app functions. 
+
 With Flask, I can define which URLs exist and what they should do, making it perfect for small projects and prototypes. 
+
 I can also easily add features like database support or login functionality using different extensions.
 
-- running your app:
-To run a Flask web application with HTML and CSS:
 
-*Install Flask: pip install Flask
-*Create a Python file (app.py) with basic Flask setup to handle routes.
-*Put HTML files in a templates folder and CSS files in a static folder.
-*Run the app by executing: python app.py
-*Visit http://127.0.0.1:5000/ in your browser to see the app.
-
-
--Docker file and Docker compose: 
+ * Docker file and Docker compose:
+ 
 Because the project has two apps: BurgerOrder and KitchenView. 
 Connecting them to the database was challenging due to different file paths on each machine, but Docker Compose provided an effective solution. 
+
 Setting up Docker Compose was straightforward because I had already created Docker files for both Kitchen and BurgerOrderer, which formed the base for the Compose setup. 
 While a Dockerfile is used to build a container from an image, Docker Compose orchestrates multiple containers, allowing them to communicate and function together. 
 This made Docker Compose ideal for managing the different components of the project, such as services and databases. 
+
 Additionally, the volumes defined in my Docker files were crucial for data persistence, ensuring data wouldn't be lost when containers were recreated or removed.
 
--adminer:
+ * adminer:
+ * 
 Adminer is a simple tool for managing databases through your web browser. 
 You just upload one file to your server, and then you can use Adminer to create and edit databases directly in your browser.
+
 I used SQLite Web because its specifically made for managing SQLite databases only.
 
-- id:
+ * id:
+ * 
 unique_id = str(uuid.uuid4())
+
 generates a unique string using a random UUID (version 4). 
 It's used to create secure and unique identifiers. 
 This is a good function to use because it simplifies the process of creating unique IDs without needing to worry about collisions or manual generation.
 
-- session and lista:
+* session and lista:
+  
 Using session in Flask for handling orders is preferable to a list because:
 
 User-Specific Storage: session isolates data per user, ensuring individual orders are kept separate.
@@ -568,20 +655,25 @@ Security: session data is encrypted, whereas a global list could expose sensitiv
 
 Overall, session ensures data isolation, persistence, and security, making it the superior choice for managing user orders.
 
--Virtual machine:
+ * Virtual machine:
 
 A virtual machine (VM) is software that acts like a real computer, allowing you to run an operating system and programs just like on a physical machine. 
+
 It’s used to isolate environments, run different systems on the same hardware, and improve flexibility and security.
 
--Pytest:
-Pytest is a Python tool for testing code. It helps you write and run tests to make sure your code works correctly. 
+ * Pytest:
+Pytest is a Python tool for testing code. It helps you write and run tests to make sure your code works correctly.
+
 It is easy to use and shows detailed reports when tests fail. 
 You can also use features like reusable setups (fixtures) and running the same test with different data (parameterized tests). 
 Overall, pytest is helpful way to ensure your code is working as expected.
 
--Debugging and mock:
+ * Debugging and mock:
+
 Testing was challenging because the database was not directly accessible in the kitchen view and order components. 
+
 The database was set up as a Docker volume, which made it difficult to test any functionality that depended on it. 
+
 Moving forward, it would be better to mock the database instead of using the real one. 
 By doing this, we can control what data is in the database, making sure that tests are always consistent and reliable.
 
@@ -589,6 +681,7 @@ For example, when testing a function that retrieves data,
 using the real database can lead to unpredictable results since the data may change between test runs. 
 Mocking allows us to define exactly what data is available during a test, 
 which eliminates the variability and ensures that tests always run under the same conditions.
+
 for next time: 
 Mocking is a valuable tool when testing or debugging because it allows you to replace certain parts of the code, like functions or objects, with "fake" versions. 
 These fake versions behave just like the real ones but are simpler and more controllable. 
@@ -599,32 +692,41 @@ I created one mockup, but switched to Magic Mockup instead because it’s much f
 With Magic Mockup, you just drag and drop your design, and it instantly places it in a realistic scene—perfect for saving time.
 
 ----- 
-            what i thought about the project
 
-What went less good:
+ * what i thought about the project
+
+ * What went less good:
+
 In the beginning, we struggled to understand the project, the workload, and how to organize our work, as no one had enough experience to lead the team. 
 We lacked an effective process, which ultimately hindered progress and is something we need to improve for future projects.
 
 Team members struggled to work together effectively, which led to a lack of commitment from everyone involved. 
+
 This lack of alignment slowed down our progress and negatively impacted the project's success. 
 Additionally, since no one had formal education in programming, starting the project was particularly difficult. 
+
 We faced challenges in knowing where to begin, how to divide tasks, and how to work efficiently. 
 As we had no prior programming experience, we were learning everything as we progressed, which resulted in varying levels of understanding within the group. 
 Those who were able to advance more quickly often ended up doing most of the work, creating disparities within the team. 
+
 The sheer amount of information was overwhelming, especially for beginners, adding significantly to the challenge.
 
 We also faced challenges with GitHub. Initially, everyone committed to the same main branch, which led to issues when changes were pulled and integrated. 
+
 This caused conflicts and delays. Later, we started using branches, which helped a lot in reducing these problems and improving our workflow. 
+
 For our next project, we aim to utilize these features from the start.
 
-What went good:
+ * What went good:
+
 However, a positive aspect was that I learned a lot throughout the process. 
 I had the opportunity to engage in many new tasks, which was very informative and enriching. 
 We also helped each other a lot to understand all the new information and different parts of the project, and fixed issues whenever someone had a problem with their computer. 
 Even though it was a lot of information to take in, it was probably really good for future projects and for the next time we have this course.
 
 
-Next time:
+ * Next time:
 To improve for next time, we need to plan more effectively by assigning specific roles to each member. 
-This approach will ensure that everyone contributes to the project and prevents any one person from shouldering the entire workload. 
+This approach will ensure that everyone contributes to the project and prevents any one person from shouldering the entire workload.
+ 
 Furthermore, fostering better listening and communication among team members will enhance our collaboration and overall success.
