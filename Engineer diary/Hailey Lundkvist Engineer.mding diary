@@ -82,3 +82,44 @@
 #### Week 42:
     - Finish with engineer diary
     - Check all things and submit submissions
+
+
+### Commands I learned but don't remember when I learned them
+
+    - All the commands below are from notes taken during the project.  
+
+  
+##### Start with Github
+| Commands                                 | To do     |
+| ----------------------------------------- | ------------------------------------------------- |
+| git init                                    | Initialize a local Git repository     |
+| git clone <git@github.com:HaileyLV/PA1489-project.git> |Creat a local copy on your computer. Read more: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>   |
+
+
+
+##### Create/remove file, folder 
+| Commands                                 | To do     |
+| ----------------------------------------- | ------------------------------------------------- |
+|touch <file_name.py]       |Create a python file _(on local_)      |
+|mkdir <folder_name]       |Create a folder _(on local)_      |
+|git rm [file_name.py]                   |remove a file _(local) _                                      |
+|git rm file_name.py.txt         | To remove a file both from the Git repository and the filesystem _(when file has been pushed to Github) _   |
+|git rm file_name.py --cached  |  To remove the file from the repository, but keep it on the filesystem _(when file has been pushed to Github)_ |
+|git add [file_name.py]                    | add a python file to the staging area _(on local) _     |
+|git add -A                 | add all new and changed files to the staging area _(on local)_ **(not recommended because it can lead to commiting/pushing unsued files)**  |
+
+
+
+  
+| Commands                                  | To do                                             |
+| ----------------------------------------- | ------------------------------------------------- |
+|cd <path to navigate to the virtual machine installed directory>. Ex: on my laptop: <cd myproject/.venv/bin> With your laptop, it can be diffirence| move to the virtual machine installed directory|
+|source activate | turn on the virtual machine|
+- Can make an automate.sh to run the docker file more quickly without type every lines in terminal. Run automate.sh with commands: ./automat-run.sh
+- Docker commands:
+
+ |Commands                                 | To do                                      |
+| ----------------------------------------- | ------------------------------------------------- |
+|docker build -t <image's name>:<version> .| Build dockers images. Best att use ex: customer: latest for the images name and version  |
+|docker images | Show all images|
+|docker run -d --name <containers name> -p <ports> <image's name>:<version> | run the docker image|
