@@ -25,7 +25,7 @@
 --------------
 
 v.35 
-walk-through:
+   walk-through:
 For the upcoming two weeks, we’ve been instructed to complete the following tasks:
 
 * Form a group of 3 to 5 members.
