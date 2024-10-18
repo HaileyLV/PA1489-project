@@ -6,7 +6,7 @@ Engineer diary - Wilma Eriksson
 I’ve learnt new tools to use when coding which make teamworks easier. 
 
 Github / Codeberg 
-Is a good tool to use when working together with a project. With Github you can share source code with the classmate next to you or your coworkers in Japan.
+	Is a good tool to use when working together with a project. With Github you can share source code with the classmate next to you or your coworkers in Japan.
 
 commands like: git pull, git push, git status, git fetch
  
