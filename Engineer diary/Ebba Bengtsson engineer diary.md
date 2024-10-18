@@ -28,7 +28,7 @@
 
 # **diary**
 
-v.35 
+# **v.35**
 
 walk-through:
 
@@ -42,7 +42,7 @@ as the group needs to have at least three people.
 
 Additionally, I’ve set up my computer for the course and created a GitHub account to manage our projects.
 
-v.36 
+# **v.36**
 
 This Week's Progress:
 
@@ -72,7 +72,7 @@ Sides: Wilma
 
 Kitchen View: Sabor, Thanh
 
-v.37-38
+# **v.37-38**
 
 v.37
 
@@ -280,7 +280,7 @@ Learn about Flask commands to create a simple application. Link: https://www.gee
 
 -----
 
-v.39
+# **v.39**
 
  * learned:
    
@@ -359,7 +359,7 @@ docker start adminer
 
 ----
 
-v40
+# **v.40**
 
  * learn:
    
@@ -414,7 +414,7 @@ docker-compose up --build --force-recreate -> rebuilds images and recreates all 
 
 ----
 
-v41
+# **v.41**
 
  * learn:
             
@@ -500,7 +500,7 @@ use this code to open database so that database will be closed outside "with"
 
 ----
 
-v42
+# **v.42**
 
  * learn:
 How to do a pytest for debugging.
