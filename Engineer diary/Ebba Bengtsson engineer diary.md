@@ -1,4 +1,4 @@
-# **diary arrangement**
+# **diary layout**
 
 1. Weekly Report
  * what i learned
