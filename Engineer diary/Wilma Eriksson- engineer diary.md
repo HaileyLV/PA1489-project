@@ -2,7 +2,7 @@ Engineer diary - Wilma Eriksson
 
 
 
-Tools
+**Tools**
 I’ve learnt new tools to use when coding which make teamworks easier. 
 
 Github / Codeberg 
@@ -16,17 +16,17 @@ Docker
 I have also learnt that there are different programming languages, for example Java, Javascript and C++. 
 
 
-the Teamwork
+**the Teamwork**
 	The groups teamwork was alright. Our communication could have been better, because for me it was unclear who was supposed to do what. In the end almost the whole project was made by one person. 
 
 
 
-My contribution
+**My contribution**
 	My contribution could have been better. Since it was unclear to me who was doing what, I felt overwhelmed by everything. I find it difficult to manage my time because I have difficulty anticipating how long something will take. In the beginning I thought I had all the time in the world but now the deadline is on friday. 
 
 
 
-Conclusion
+**Conclusion**
 	My conclusion is that I need to start planning my weeks better. I’ll also use the support I'm allowed to have to make me “see” better. 
 
 
