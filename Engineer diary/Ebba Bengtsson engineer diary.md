@@ -277,13 +277,14 @@ Learn about Flask commands to create a simple application. Link: https://www.gee
 -----
 
 v.39
+
  * learned:
    
 Learn about Flask. Link: https://www.geeksforgeeks.org/flask-creating-first-simple-application/
 
 and docker file, database. 
 
-            what happen in the group:
+ * what happen in the group:
 
 Meeting 3:
 
@@ -446,7 +447,7 @@ Added session instead of a list:
 session is better than a list in Flask because it manages data per user instead of globally, is more secure (encrypted), saves server memory, and maintains user data across different requests. 
 A list shares data between all users and is less secure.
             
-            What i did:
+ * What i did:
 
 TEST OCH DEBUG:
 Read about "Testing Flask Applications with pytest" and try implementing it on your own.
@@ -604,8 +605,9 @@ It also helps ensure the site looks good across different devices by making it r
 By separating the content from the presentation, CSS keeps the code clean and easy to maintain.
 
 
--python in a working invierment 
-
+ * python in a working invierment:
+   
+Using Flask and Python, I have defined several different routes. I explained their structure and how they work, including which URL paths they respond to, which HTTP methods are supported (such as GET and POST), and how each route processes incoming requests and returns responses.
 
  * flask app:
    
@@ -629,14 +631,14 @@ This made Docker Compose ideal for managing the different components of the proj
 Additionally, the volumes defined in my Docker files were crucial for data persistence, ensuring data wouldn't be lost when containers were recreated or removed.
 
  * adminer:
- * 
+   
 Adminer is a simple tool for managing databases through your web browser. 
 You just upload one file to your server, and then you can use Adminer to create and edit databases directly in your browser.
 
 I used SQLite Web because its specifically made for managing SQLite databases only.
 
  * id:
- * 
+   
 unique_id = str(uuid.uuid4())
 
 generates a unique string using a random UUID (version 4). 
