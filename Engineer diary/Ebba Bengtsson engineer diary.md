@@ -1,3 +1,5 @@
+# **diary arrangement**
+
 1. Weekly Report
  * what i learned
  * meetings
@@ -23,6 +25,8 @@
  * what went less well
  * Next time
 --------------
+
+# **diary**
 
 v.35 
 
@@ -550,8 +554,7 @@ Magic Mockup: An automated tool that makes it easy to place your design into rea
 
 ----
 
- * What I learned, in more detail:
-
+# **What I learned, in more detail**
  
 * Github:
 
@@ -695,7 +698,7 @@ With Magic Mockup, you just drag and drop your design, and it instantly places i
 
 ----- 
 
- * what i thought about the project
+# **what i thought about the project**
 
  * What went less good:
 
