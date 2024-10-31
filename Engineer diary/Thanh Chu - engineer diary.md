@@ -268,70 +268,60 @@ Containers: Our project, of course
          + We started with assignment 3 very late. The time was too urgent so I could not perform as many test cases as expected. In the next project, we had to adjust the time estimate.
          + I wanted to test creating and sending orders to the database but out order_id is automatically generated, so I had not dared to try, afraid of conflicts.
          + My test in BurgerOrderer are all hard-code tests. It the user changes the details in database, my tests are no longer valid. I still do not know if there is a way to fix these things.
-- **Debugging**:
-   + I ran  "run and debug" in VS code everytime I done something new, tried to understand the error message, found bugs and fixed it. It became useful tool for me mostly when I started coding individual python files, especially when I "step into" and follow the changing values of variables, functions to find the error. But it became harder when we had a database and slited two applications into two separate containers. I use logger instead to print everything out to localize and find the error.
-   + Besides that, I use try-except to catch the fail and avoid program interruption. It's also very helpful.
-   + **Debug sections**: 
-      + I did not update debug sections before October 2.
+- **Debugging section**:
+   - ** Reflections:**
+     - **What went well**: I fixed all bugs that I found and the program ran fine without errors or bugs when we ran and tested it.
+     - **How did you solve your challenges? What could you have done differently?**
+        - I ran  "run and debug" in VS code everytime I done something new, tried to understand the error message, found bugs and fixed it. It became useful tool for me mostly when I started coding individual python files, especially when I "step into" and follow the changing values of variables, functions to find the error. But it became harder when we had a database and slited two applications into two separate containers. I use logger instead to print everything out to localize and find the error. I printed everything with the name of variebel so I could control which was right and wrong.
+             - For example: app.logger.info("Burger: %s", burger)
+        - Besides that, I use try-except to catch the fail and avoid program interruption. It's also very helpful.
+      - **What did you not manage to solve? Why not?**
+        - Updating the debug section became very difficult because I did not do it from the beginning, when errors occurred continuously and we struggled to find the error and fix it. I only did it when I was near the end of the project, so I missed many cases to update. When the program was running well, sitting down to remember the exact error as well as the code I did wrong and how to fix it was really a challenge.
+        - The exprerience is that next time, I need to read the requirements more carefully so as not to miss the requirements at the last minute like this.
+   - **Details on what is being debugged:**
+#####  OCTOBER 2, 2024
+  - **Debug purpose**: Check the reason why the order, that was printed in KitchenView, was incorrect.
+_The order collected in BurgerOrderer was_: Burger: CHEESE BURGER, Added Items: vegan cheese, Removed Items: salad, Added Sides: chicken nugget, Drinks: coca-cola, Order_ID: 159
+_But the order we had in KitchenView was_:
+   "Order ID 159 : (Order content: Burger: (1, 'CHEESE BURGER', 'INCLUES: CHEESE, HAMBURGER, SAUCE, SALAD', 159, 1, 5, 159, 'NOT DONE', 5, 'VEGAN CHEESE', 'ITEMS', 'ADD')) : (Options: cheese burger | inclues: cheese, hamburger, sauce, salad | 159 )"
+  - **Breakpoints Set**:
+     + Line 20: when the order was collected before join
+     + Line 29, 30: during the order was collected after join
+     + Line 35: when the order collected
+  - **Variables Monitored**: 'result' and 'result_items'. Check the elements in the result and the result_item list to get the exact position of the elements to collect the correct order. 
+  - **Debug Process**:
+      - Line 20: list was created. result = []
+      - Line 29:
+        ```
+         result_item = [159]
+         result = []
+         ```
+      - Line 30:
+        ```
+         result_item = [159, 'cheese burger']
+         result = []
+         ```
+      - Line 35: 
+         ```
+         result_item = [159, 'cheese burger', 'vegan cheese', 'ITEMS', 'ADD', 'salad', 'ITEMS', 'REMOVE', 'chicken nugget', 'SIDES', 'ADD', 'coca-cola', 'DRINKS', 'ADD']
+         result = [[159, 'cheese burger', 'vegan cheese', 'ITEMS', 'ADD', 'salad', 'ITEMS', 'REMOVE', 'chicken nugget', 'SIDES', 'ADD', 'coca-cola', 'DRINKS', 'ADD']]`
+         ```
+  - **Results**: Count the index of all elements in the list, fix the position of the elements tobe printed in the KitchenView scrren
+         ```
+         Order ID 159 : (Order content: Burger: CHEESE BURGER) : (Options: add items : vegan cheese | remove items : salad | add sides : chicken nugget | add drinks : coca-cola) )
+         ```
+  
+##### OCTOBER 11, 2024
+- **Debug purpose**: tried to run test cases but all test cases fail, had a problem with error message:
 ```
-- October 2, 2024
-- Problem:
-c.execute("INSERT INTO orders (order_number, burger, added_items, removed_items, added slides, drinks) VALUES (?, ?, ?, ?, ?, ?)")
-sqlite3.OperationalError: near "slides": syntax error
-- Debug Session: Checked the def index in BurgerOrderer
-- Solution: syntax error. I did not have any variable "add slides" in my code and we do not assign a variable with white space in Python.
-- Edit "add slides" to "add_slides", now works.
-- References:
+  file /Users/chuhathanh/Workspaces/Thanhs Workspaces/PA1489-project/Containers/MenuStore/db_test.py, line 4
+  def test_table_orders_exist (db_connection):
+E       fixture 'db_connection' not found
+>       available fixtures: _configure_application, _monkeypatch_response_class, _push_request_context, accept_any, accept_json, accept_jsonp, accept_mimetype, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, client, client_class, config, doctest_namespace, live_server, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, request_ctx, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.`
+.....
 ```
-```
-- October 2, 2024
-- Problem:
-INSERT INTO items VALUES (21, "Not remove any items", "ITEMS", "REMOVE")
-Execution finished with errors.
-Result: unrecognized token: ""REMOVE"
-At line 1:
-INSERT INTO items VALUES (21, "Not remove any items", "ITEMS",
-- Debug Session: Checked the def done in BurgerOrderer
-- Solution: change the double quotes (") to single quotes (') with string
-- References: https://www.sqlite.org/quirks.html#double_quoted_string_literals_are_accepted
-```
-```
-- October 2, 2024
-- Problem:
-insert to items values (20, "No add items", items, add)
-Execution finished with errors.
-Result: near "to": syntax error
-At line 1:
-insert to
-- Debug Session: Checked the def done in BurgerOrderer
-- Solution: Edit "insert to" to "insert into", now works.
-- References: https://www.sqlitetutorial.net/sqlite-insert/
-```
-```
-- October 2, 2024
-- Problem: werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand. KeyError: 'burger'
-- Debug Session: Checked the def topping in BurgerOrderer
-- Solution: my code is attempting to access a key ('burger') in the request.form object that does not exist. Change "request.form['burger]" to "request.form.get('burger')
-- References: https://stackoverflow.com/questions/60599763/werkzeug-exceptions-badrequestkeyerror-400-bad-request-the-browser-or-proxy
-```
-```
-- October 7, 2024
-- Problem: jinja2.exceptions.TemplateNotFound: error.html
-- Debug Session: Checked the def topping in BurgerOrderer
-- Solution: My Flask application is trying to render an error.html template, but it cannot find that file in my templates directory. I created an error.html file inside the template ditectory and now it works.
-- References: https://medium.com/@rakesh0651/templatenotfound-5b61e8a7ecd5
-```
-```
-- October 7, 2024
-- Problem: I have a problem with error message "out of range" 
-- Debug Session: Try to print the orders from KitchenView
-- Solution: I use command app.logger.info to print every lines to console, check and edit code and now it works.
-- References:
-```
-```
-- October 11, 2024
-- Problem: I have a problem with error message that there is no table named "burger" in database
-- Debug Session: Try to test the table exists in database
-- Solution: I import 'os' module and use 'join' to set up the relative path from the BurgerOrderer folder to MenuStore during this test and now it works.
-- References: https://stackoverflow.com/questions/35337704/how-to-open-a-file-by-its-path-relative-to-the-python-module-when-that-module-i
-```
+- **Breakpoints Set**: line 4
+- **Debug Process**: I imported 'pytest fixtures' function to build the connect to database.
+- **Result**: After done with the solution, all tests passed.
+- **References**: https://stackoverflow.com/questions/35337704/how-to-open-a-file-by-its-path-relative-to-the-python-module-when-that-module-i
