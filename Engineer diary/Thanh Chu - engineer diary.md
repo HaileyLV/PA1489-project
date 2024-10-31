@@ -279,39 +279,63 @@ Containers: Our project, of course
         - Updating the debug section became very difficult because I did not do it from the beginning, when errors occurred continuously and we struggled to find the error and fix it. I only did it when I was near the end of the project, so I missed many cases to update. When the program was running well, sitting down to remember the exact error as well as the code I did wrong and how to fix it was really a challenge.
         - The exprerience is that next time, I need to read the requirements more carefully so as not to miss the requirements at the last minute like this.
    - **Details on what is being debugged:**
-#####  OCTOBER 2, 2024
-  - **Debug purpose**: Check the reason why the order, that was printed in KitchenView, was incorrect.
-_The order collected in BurgerOrderer was_: Burger: CHEESE BURGER, Added Items: vegan cheese, Removed Items: salad, Added Sides: chicken nugget, Drinks: coca-cola, Order_ID: 159
-_But the order we had in KitchenView was_:
-   "Order ID 159 : (Order content: Burger: (1, 'CHEESE BURGER', 'INCLUES: CHEESE, HAMBURGER, SAUCE, SALAD', 159, 1, 5, 159, 'NOT DONE', 5, 'VEGAN CHEESE', 'ITEMS', 'ADD')) : (Options: cheese burger | inclues: cheese, hamburger, sauce, salad | 159 )"
-  - **Breakpoints Set**:
+####  **OCTOBER 1, 2024**
+- **Debug purpose**: Ran the program, got the error message: tuple index out of range
+     ```
+   File "/app/app.py", line 72, in index
+   def index():Open an interactive python shell in this frame
+       # Using a context manager for the database connection
+       try:
+           listBurgerData = select_a_column ('name', 'burger')
+           # Use list comprehension to fetch and create the list
+           listBurger = [name[1] for name in listBurgerData]
+      ```
+- **Breakpoints Set**:
+       - Line 70: when the listBurger is retrieved from the database
+       - Line 72: when the listBurger is collected
+- **Variables Monitored**: listBurgerData, listBurger
+- **Debug Process**:
+     - Line 70: listBurgerData = [('cheese burger',), ('fish burger',), ('vegan burger')]
+     - Line 72: listBurger: index name[1] out of rangename. Reason: name = ('cheese burger',): name is a tuple that has only one element so that name[1] is out of range.
+- **Results**: Changed the index [1] to [0], then it worked.  
+         
+####  **OCTOBER 2, 2024**
+- **Debug purpose**: Check the reason why the order, that was printed in KitchenView, was incorrect.
+   - _The order collected in BurgerOrderer was_:
+     ```
+      Burger: CHEESE BURGER, Added Items: vegan cheese, Removed Items: salad, Added Sides: chicken nugget, Drinks: coca-cola, Order_ID: 159
+      ```
+   - _But the order we had in KitchenView was_:
+      ```
+      Order ID 159 : (Order content: Burger: (1, 'CHEESE BURGER', 'INCLUES: CHEESE, HAMBURGER, SAUCE, SALAD', 159, 1, 5, 159, 'NOT DONE', 5, 'VEGAN CHEESE', 'ITEMS', 'ADD')) : (Options: cheese burger | inclues: cheese, hamburger, sauce, salad | 159 )
+      ```
+- **Breakpoints Set**:
      + Line 20: when the order was collected before join
      + Line 29, 30: during the order was collected after join
      + Line 35: when the order collected
-  - **Variables Monitored**: 'result' and 'result_items'. Check the elements in the result and the result_item list to get the exact position of the elements to collect the correct order. 
-  - **Debug Process**:
-      - Line 20: list was created. result = []
-      - Line 29:
-        ```
+- **Variables Monitored**: 'result' and 'result_items'. Check the elements in the result and the result_item list to get the exact position of the elements to collect the correct order. 
+- **Debug Process**:
+     - Line 20: list was created. result = []
+     - Line 29:
+       ```
          result_item = [159]
          result = []
          ```
-      - Line 30:
-        ```
+     - Line 30:
+       ```
          result_item = [159, 'cheese burger']
          result = []
          ```
-      - Line 35: 
+     - Line 35: 
          ```
          result_item = [159, 'cheese burger', 'vegan cheese', 'ITEMS', 'ADD', 'salad', 'ITEMS', 'REMOVE', 'chicken nugget', 'SIDES', 'ADD', 'coca-cola', 'DRINKS', 'ADD']
          result = [[159, 'cheese burger', 'vegan cheese', 'ITEMS', 'ADD', 'salad', 'ITEMS', 'REMOVE', 'chicken nugget', 'SIDES', 'ADD', 'coca-cola', 'DRINKS', 'ADD']]`
          ```
-  - **Results**: Count the index of all elements in the list, fix the position of the elements tobe printed in the KitchenView scrren
+- **Results**: Count the index of all elements in the list, fix the position of the elements tobe printed in the KitchenView scrren:
          ```
          Order ID 159 : (Order content: Burger: CHEESE BURGER) : (Options: add items : vegan cheese | remove items : salad | add sides : chicken nugget | add drinks : coca-cola) )
          ```
-  
-##### OCTOBER 11, 2024
+#### **OCTOBER 11, 2024**
 - **Debug purpose**: tried to run test cases but all test cases fail, had a problem with error message:
 ```
   file /Users/chuhathanh/Workspaces/Thanhs Workspaces/PA1489-project/Containers/MenuStore/db_test.py, line 4
