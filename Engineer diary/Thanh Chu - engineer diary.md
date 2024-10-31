@@ -296,7 +296,7 @@ Containers: Our project, of course
 - **Variables Monitored**: listBurgerData, listBurger
 - **Debug Process**:
      - Line 70: listBurgerData = [('cheese burger',), ('fish burger',), ('vegan burger')]
-     - Line 72: listBurger: index name[1] out of rangename. Reason: name = ('cheese burger',): name is a tuple that has only one element so that name[1] is out of range.
+     - Line 72: listBurger: index name[1] out of range. Reason: name = ('cheese burger',): name is a tuple that has only one element so that name[1] is out of range.
 - **Results**: Changed the index [1] to [0], then it worked.  
          
 ####  **OCTOBER 2, 2024**
