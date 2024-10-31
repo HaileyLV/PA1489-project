@@ -269,7 +269,7 @@ Containers: Our project, of course
          + I wanted to test creating and sending orders to the database but out order_id is automatically generated, so I had not dared to try, afraid of conflicts.
          + My test in BurgerOrderer are all hard-code tests. It the user changes the details in database, my tests are no longer valid. I still do not know if there is a way to fix these things.
 - **Debugging section**:
-   - ** Reflections:**
+   - **Reflections:**
      - **What went well**: I fixed all bugs that I found and the program ran fine without errors or bugs when we ran and tested it.
      - **How did you solve your challenges? What could you have done differently?**
         - I ran  "run and debug" in VS code everytime I done something new, tried to understand the error message, found bugs and fixed it. It became useful tool for me mostly when I started coding individual python files, especially when I "step into" and follow the changing values of variables, functions to find the error. But it became harder when we had a database and slited two applications into two separate containers. I use logger instead to print everything out to localize and find the error. I printed everything with the name of variebel so I could control which was right and wrong.
