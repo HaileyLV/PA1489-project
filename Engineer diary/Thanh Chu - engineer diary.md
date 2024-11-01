@@ -291,7 +291,7 @@ Containers: Our project, of course
            listBurger = [name[1] for name in listBurgerData]
       ```
 - **Breakpoints Set**:
-     - Line 70: when the listBurger is retrieved from the database.
+     - Line 70: when the listBurgerData is retrieved from the database.
      - Line 72: when the listBurger is collected
 - **Variables Monitored**: listBurgerData, listBurger
 - **Debug Process**:
