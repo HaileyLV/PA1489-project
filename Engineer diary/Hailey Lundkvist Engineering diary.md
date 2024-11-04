@@ -86,6 +86,9 @@
 - Test & Debug - Check if vscode can run and debug more than one file and if it can see whether the files work together or not - It can debug more than one only you might need extensions to see if the files work together (not sure if it works for this project however).
         Note: Ended up using pytest to see if it works.
 - Installed pytest and ran & debugged project.
+- For debuggin I used the test_select_a_column() function and ran the test. I start by connecting to the database using the file path, and then we use a cursor to execute SQL commands. The test then calls another_select_a_column, specifying that it should retrieve all entries from the "name" column in the "burger" table.
+
+The test compares the retrieved data to a known set of values: 'cheese burger', 'fish burger', 'vegan burger'. By seeing whether or not this comparison matches, we can determine if another_select_a_column is functioning correctly. If there’s a mismatch, it could indicate an issue with data retrieval, an error in the column name, or even a problem with the database connection. This test thus provides a quick way to check and debug issues in data selection within the database.
      
 #### Week 42:
     - Edited my engineering diary and added some final touches.
