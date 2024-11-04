@@ -674,7 +674,22 @@ You can also use features like reusable setups (fixtures) and running the same t
 Overall, pytest is helpful way to ensure your code is working as expected.
 
  * Debugging and mock:
+   
+Summary of Tests Implemented:
+db_connection():
+A pytest fixture that creates a connection to the SQLite database orders.db.
+The connection is used during testing and is closed afterward.
+This allows the database connection to be easily reused across multiple test cases without having to open and close it each time.
 
+test_select_a_column():
+Tests the function another_select_a_column to verify if it correctly fetches values from the column "name" in the "burger" table of the database.
+The test checks if the result matches the expected burgers: ('cheese burger',), ('fish burger',), ('vegan burger',).
+
+test_index():
+Tests the function another_index to ensure it properly retrieves a list of burger names from the "burger" table.
+Verifies that the list contains the correct burger names in the expected format: ['cheese burger', 'fish burger', 'vegan burger'].
+
+Challenges Faced:
 Testing was challenging because the database was not directly accessible in the kitchen view and order components. 
 
 The database was set up as a Docker volume, which made it difficult to test any functionality that depended on it. 
@@ -695,6 +710,38 @@ Mocking lets you simulate different scenarios, such as errors or special data, m
 
 I created one mockup, but switched to Magic Mockup instead because it’s much faster and easier. 
 With Magic Mockup, you just drag and drop your design, and it instantly places it in a realistic scene—perfect for saving time.
+
+During the testing of the Flask application using pytest, several core functionalities were verified to ensure that different routes and endpoints work as intended. Below is a detailed analysis of the testing approach and some notable challenges faced along the way:
+
+Summary of Tests Implemented:
+
+**Kitchen View Testing** (`test_view`, `test_verified_order`): Additional tests were implemented to ensure that the kitchen view works correctly. Mocking of the SQLite database connection was utilized to provide sample order data for testing the `/` view route. The tests verified that the mock data, including different types of burgers and customer details, are correctly displayed in the response, and ensured that the status code returned is 200 OK. The `test_verified_order` specifically checked that certain expected order data (e.g., "Cheeseburger" and "Fishburger") is present in the HTML response, confirming correct rendering.
+
+**Delete Orders Functionality** (`delete_orders`): A route for deleting all orders was added to support administrative actions during development and testing. The `/delete_orders` route deletes all records from the orders database and redirects the user to the main view after successful deletion, ensuring that no residual orders are present in the system.
+
+**Index Route** (`test_index_route`): Verified that the root page (`/`) returns a 200 status code and contains the expected welcome text ("Welcome to Free Burger!").
+
+**Burger Pages** (`test_cheese_route`, `test_fish_route`, `test_vegan_route`): Checked that specific routes (`/cheese`, `/fish`, `/vegan`) correctly display their respective content such as "Cheese Burger", "Fish Burger", and "Vegan Burger".
+
+**Error Page** (`test_error_route`): Tested the `/error` route to confirm that the error message is appropriately displayed.
+
+**Add Order Functionality** (`test_add_order_route`): Verified that the `/add_order` route functions as expected, simulating adding an order to the session without interacting with the database. The assertions include ensuring session values correctly reflect the order data provided, including customer name, burger type, additional items, sides, and drink. (I couldn't not make this one work)
+
+**Order Completion** (`test_order_done_route`): Tested the `/order_done` functionality by using the `patch` decorator to mock database connections, ensuring no direct database interaction during testing. It verified that the order was successfully committed to the database and that the session was cleared after the completion.
+
+**Error Handling Route** (`test_error_page`): Confirmed that a specific route (`/cause_error`) triggers a 500 Internal Server Error response and displays the proper error message.
+
+During development, I continuously verified that everything functioned correctly by frequently testing the website.
+
+During development, I started using mockups to create a kitchen view so that I did not need to rely on the actual database and could conduct identical and consistent tests each time. Initially, I struggled to make this work, as the test wouldn't run properly with the standard mocking approach. Eventually, I discovered MagicMock, which proved to be far easier to use than traditional mockups because it offers a faster, automated process that does not require design or Photoshop skills. MagicMock allows you to upload your setup and directly place it in realistic scenarios without having to manually adjust perspectives, shadows, or lighting. This made it much simpler for me to implement effective mockups for the test.
+
+I began the debugging process later than planned, which led to time constraints that prevented me from running as many test cases as I had intended. Moving forward, I will ensure to allocate a full week dedicated to debugging in order to thoroughly test and refine the application before completion.
+
+Challenges Faced:
+
+**Testing Multiple Orders in a Session**: While attempting to implement the `test_add_two_orders` function, it became apparent that the Flask session resets itself automatically after each request in the testing environment. This posed a significant challenge in verifying scenarios involving multiple orders being added to the session concurrently. The current session management behavior prevents maintaining state across multiple test requests, making it difficult to effectively test scenarios involving multiple orders without extensive workarounds or changes to session persistence logic.
+
+Despite multiple attempts, maintaining a stable session with multiple orders proved infeasible within the default test client configuration. This is a limitation that might require adjustments to session handling or potentially exploring alternative state management techniques for more robust testing in the future.
 
 ----- 
 
