@@ -54,7 +54,7 @@ These tests helped me understand that the problem was with validating user data,
 - What was easy?** Setting up breakpoints and using "Continue" to move through the code was easy once I identified where the problem was.
 - What was difficult?** Understanding the subtle bugs related to user data and how it flowed through form handling was challenging, especially with asynchronous processes.
 - Can debugging be a useful tool for me?** Absolutely. Debugging is a valuable tool to really understand how code behaves under different conditions. By seeing variable values in real-time and understanding how the flow is affected by user interactions, I now feel more confident in handling similar problems in the future.
-##Reflections:
+- Reflections:
 Debugging was a learning process where we not only solved a technical problem but also gained insights into how important proper validation of user input is. We learned to improve our testing process by introducing more test cases to prevent similar bugs from occurring in the future.
 
 #### Week 35:
