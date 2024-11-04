@@ -48,13 +48,13 @@ I tested different scenarios to see how they affected the code:
 - **Cancel the order halfway**: I tried to cancel the order before finishing. I noticed that the code flow did not update `form_data` at all, which showed that there was an issue with handling canceled orders.
 These tests helped me understand that the problem was with validating user data, where the form did not always interpret the user's choices correctly.
 
-##Summary and Reflection
+## Summary and Reflection
 - What went well?** Using the debugger to systematically find the error worked well, and I got a better understanding of how POST data is handled in our application.
 - What went less well?** It was hard to understand exactly where the data was lost, especially since the error only happened sometimes. Setting the correct breakpoints and choosing the right function to step into took time.
 - What was easy?** Setting up breakpoints and using "Continue" to move through the code was easy once I identified where the problem was.
 - What was difficult?** Understanding the subtle bugs related to user data and how it flowed through form handling was challenging, especially with asynchronous processes.
 - Can debugging be a useful tool for me?** Absolutely. Debugging is a valuable tool to really understand how code behaves under different conditions. By seeing variable values in real-time and understanding how the flow is affected by user interactions, I now feel more confident in handling similar problems in the future.
-## Reflections:
+##Reflections:
 Debugging was a learning process where we not only solved a technical problem but also gained insights into how important proper validation of user input is. We learned to improve our testing process by introducing more test cases to prevent similar bugs from occurring in the future.
 
 #### Week 35:
