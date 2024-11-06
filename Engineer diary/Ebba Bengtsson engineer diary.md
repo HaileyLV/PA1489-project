@@ -676,20 +676,21 @@ Overall, pytest is helpful way to ensure your code is working as expected.
  * Debugging and mock:
    
 Summary of Tests Implemented:
-db_connection():
+
+**db_connection()**
 A pytest fixture that creates a connection to the SQLite database orders.db.
 The connection is used during testing and is closed afterward.
 This allows the database connection to be easily reused across multiple test cases without having to open and close it each time.
 
-test_select_a_column():
+**test_select_a_column()**
 Tests the function another_select_a_column to verify if it correctly fetches values from the column "name" in the "burger" table of the database.
 The test checks if the result matches the expected burgers: ('cheese burger',), ('fish burger',), ('vegan burger',).
 
-test_index():
+**test_index()**
 Tests the function another_index to ensure it properly retrieves a list of burger names from the "burger" table.
 Verifies that the list contains the correct burger names in the expected format: ['cheese burger', 'fish burger', 'vegan burger'].
 
-Challenges Faced:
+**Challenges Faced**
 Testing was challenging because the database was not directly accessible in the kitchen view and order components. 
 
 The database was set up as a Docker volume, which made it difficult to test any functionality that depended on it. 
@@ -702,7 +703,8 @@ using the real database can lead to unpredictable results since the data may cha
 Mocking allows us to define exactly what data is available during a test, 
 which eliminates the variability and ensures that tests always run under the same conditions.
 
-for next time: 
+for next time:
+
 Mocking is a valuable tool when testing or debugging because it allows you to replace certain parts of the code, like functions or objects, with "fake" versions. 
 These fake versions behave just like the real ones but are simpler and more controllable. 
 This makes it possible to test specific parts of the code without loading the entire system or depending on external factors, like a database or an API. 
@@ -739,9 +741,11 @@ I began the debugging process later than planned, which led to time constraints 
 
 Challenges Faced:
 
-**Testing Multiple Orders in a Session**: While attempting to implement the `test_add_two_orders` function, it became apparent that the Flask session resets itself automatically after each request in the testing environment. This posed a significant challenge in verifying scenarios involving multiple orders being added to the session concurrently. The current session management behavior prevents maintaining state across multiple test requests, making it difficult to effectively test scenarios involving multiple orders without extensive workarounds or changes to session persistence logic.
+**Testing Multiple Orders in a Session**: When trying to implement the `test_add_two_orders` function, I realized that the Flask session automatically resets after each request in the testing environment. This makes it challenging to verify scenarios where multiple orders are added to the session at the same time. The default session behavior prevents keeping state across multiple test requests, which makes testing these scenarios hard without cumbersome workarounds or changes to how the session is handled.
 
-Despite multiple attempts, maintaining a stable session with multiple orders proved infeasible within the default test client configuration. This is a limitation that might require adjustments to session handling or potentially exploring alternative state management techniques for more robust testing in the future.
+Even after several attempts, keeping a stable session with multiple orders wasn't feasible using the default test client configuration. To address this limitation, adjustments to session handling might be necessary, or it may be worth considering alternative state management approaches to allow more reliable testing in the future.
+
+
 
 ----- 
 
