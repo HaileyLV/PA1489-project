@@ -695,25 +695,22 @@ Testing was challenging because the database was not directly accessible in the 
 
 The database was set up as a Docker volume, which made it difficult to test any functionality that depended on it. 
 
-Moving forward, it would be better to mock the database instead of using the real one. 
-By doing this, we can control what data is in the database, making sure that tests are always consistent and reliable.
-
 For example, when testing a function that retrieves data, 
 using the real database can lead to unpredictable results since the data may change between test runs. 
 Mocking allows us to define exactly what data is available during a test, 
 which eliminates the variability and ensures that tests always run under the same conditions.
-
-for next time:
 
 Mocking is a valuable tool when testing or debugging because it allows you to replace certain parts of the code, like functions or objects, with "fake" versions. 
 These fake versions behave just like the real ones but are simpler and more controllable. 
 This makes it possible to test specific parts of the code without loading the entire system or depending on external factors, like a database or an API. 
 Mocking lets you simulate different scenarios, such as errors or special data, making it easier to find and fix bugs.
 
-I created one mockup, but switched to Magic Mockup instead because it’s much faster and easier. 
-With Magic Mockup, you just drag and drop your design, and it instantly places it in a realistic scene—perfect for saving time.
+Moving forward, it would be better to mock the database instead of using the real one. 
+By doing this, we can control what data is in the database, making sure that tests are always consistent and reliable.
 
-During the testing of the Flask application using pytest, several core functionalities were verified to ensure that different routes and endpoints work as intended. Below is a detailed analysis of the testing approach and some notable challenges faced along the way:
+* My own burger project debugging
+
+While testing the Flask application with pytest, several key features were checked to make sure that different routes and endpoints worked as expected. Below is a detailed overview of the testing approach and some challenges that were encountered:
 
 Summary of Tests Implemented:
 
@@ -744,7 +741,6 @@ Challenges Faced:
 **Testing Multiple Orders in a Session**: When trying to implement the `test_add_two_orders` function, I realized that the Flask session automatically resets after each request in the testing environment. This makes it challenging to verify scenarios where multiple orders are added to the session at the same time. The default session behavior prevents keeping state across multiple test requests, which makes testing these scenarios hard without cumbersome workarounds or changes to how the session is handled.
 
 Even after several attempts, keeping a stable session with multiple orders wasn't feasible using the default test client configuration. To address this limitation, adjustments to session handling might be necessary, or it may be worth considering alternative state management approaches to allow more reliable testing in the future.
-
 
 
 ----- 
