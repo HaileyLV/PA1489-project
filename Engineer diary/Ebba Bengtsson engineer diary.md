@@ -675,7 +675,7 @@ Overall, pytest is helpful way to ensure your code is working as expected.
 
  * Debugging and mock:
    
-Summary of Tests Implemented:
+**Summary of Tests Implemented:**
 
 **db_connection()**
 A pytest fixture that creates a connection to the SQLite database orders.db.
@@ -712,7 +712,7 @@ By doing this, we can control what data is in the database, making sure that tes
 
 While testing the Flask application with pytest, several key features were checked to make sure that different routes and endpoints worked as expected. Below is a detailed overview of the testing approach and some challenges that were encountered:
 
-Summary of Tests Implemented:
+**Summary of Tests Implemented:**
 
 **Kitchen View Testing** (`test_view`, `test_verified_order`): Additional tests were implemented to ensure that the kitchen view works correctly. Mocking of the SQLite database connection was utilized to provide sample order data for testing the `/` view route. The tests verified that the mock data, including different types of burgers and customer details, are correctly displayed in the response, and ensured that the status code returned is 200 OK. The `test_verified_order` specifically checked that certain expected order data (e.g., "Cheeseburger" and "Fishburger") is present in the HTML response, confirming correct rendering.
 
@@ -732,13 +732,13 @@ Summary of Tests Implemented:
 
 During development, I continuously verified that everything functioned correctly by frequently testing the website.
 
-Debugging Techniques Used:
+**Debugging Techniques Used:**
 
 Breakpoints: I set breakpoints at key points in the code to understand how things were working:
 
 In Each Route Method: I placed breakpoints in functions like add_order, order_done, and delete_orders to verify if the data was sent and received as expected.
 
-Step Into, Step Over, Continue:
+**Step Into, Step Over, Continue:**
 
 Step Into: I used "step into" when I wanted to dive deeper into a function and see exactly what was happening, like how data was updated in the session or how mocked data was being processed.
 
@@ -746,7 +746,7 @@ Step Over: I used "step over" to skip over parts of the code I knew were working
 
 Continue: I used "continue" to run until the next breakpoint, especially after I verified that a specific section was functioning properly.
 
-Watched Variables:
+**Watched Variables:**
 
 response.status_code: I checked that all routes responded as expected, for instance, with a status code of 200.
 
@@ -756,7 +756,7 @@ mock_cursor.fetchall(): Made sure the right data was being returned and used.
 
 mock_conn.commit(): I checked that the database commit() was called at the right time, especially when handling orders or deleting all orders.
 
-Challenges Faced:
+**Challenges Faced:**
 
 I started using mockups to create a kitchen view so that I did not need to rely on the actual database and could conduct identical and consistent tests each time. Initially, I struggled to make this work, as the test wouldn't run properly with the standard mocking approach. Eventually, I discovered MagicMock, which proved to be far easier to use than traditional mockups because it offers a faster, automated process that does not require design or Photoshop skills. MagicMock allows you to upload your setup and directly place it in realistic scenarios without having to manually adjust perspectives, shadows, or lighting. This made it much simpler for me to implement effective mockups for the test.
 
@@ -768,14 +768,14 @@ Testing Multiple Orders in a Session: When trying to implement the test_add_two_
 
 Even after several attempts, keeping a stable session with multiple orders wasn't feasible using the default test client configuration. To address this limitation, adjustments to session handling might be necessary, or it may be worth considering alternative state management approaches to allow more reliable testing in the future.
 
-Next time: 
+**Summary**
+
+By keeping an eye on key variables and using debugging tools effectively, I made sure everything was working correctly and was able to quickly identify and solve any issues that came up. Breakpoints at critical spots helped me understand what was happening at each stage of the code. I used "step into" to dig deeper into functions when I wanted to see how data was being handled, and "step over" to skip over code that I knew worked. "Continue" was useful when I didn’t need to pause anymore.
+
+**Next time:** 
 
 I began the debugging process later than planned, which led to time constraints that prevented me from running as many test cases as I had intended. Moving forward, I will ensure to allocate a full week dedicated to debugging in order to thoroughly test and refine the application before completion.
 During development, I continuously verified that everything functioned correctly by frequently testing the website.
-
-Summary
-
-By keeping an eye on key variables and using debugging tools effectively, I made sure everything was working correctly and was able to quickly identify and solve any issues that came up. Breakpoints at critical spots helped me understand what was happening at each stage of the code. I used "step into" to dig deeper into functions when I wanted to see how data was being handled, and "step over" to skip over code that I knew worked. "Continue" was useful when I didn’t need to pause anymore.
 
 
 ----- 
