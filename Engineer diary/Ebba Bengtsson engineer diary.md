@@ -752,7 +752,7 @@ response.status_code: I checked that all routes responded as expected, for insta
 
 sess['orders']: I monitored the session's order list to ensure new orders were being added correctly and that the session was cleared as expected, like after deleting all orders with delete_orders.
 
-mock_cursor.fetchall(): I made sure the right data was being returned and used.
+mock_cursor.fetchall(): Made sure the right data was being returned and used.
 
 mock_conn.commit(): I checked that the database commit() was called at the right time, especially when handling orders or deleting all orders.
 
@@ -760,9 +760,15 @@ Challenges Faced:
 
 I started using mockups to create a kitchen view so that I did not need to rely on the actual database and could conduct identical and consistent tests each time. Initially, I struggled to make this work, as the test wouldn't run properly with the standard mocking approach. Eventually, I discovered MagicMock, which proved to be far easier to use than traditional mockups because it offers a faster, automated process that does not require design or Photoshop skills. MagicMock allows you to upload your setup and directly place it in realistic scenarios without having to manually adjust perspectives, shadows, or lighting. This made it much simpler for me to implement effective mockups for the test.
 
+One problem I encountered was that when adding multiple orders, only the last one would be saved to the database when I clicked "done." I used the debugger to figure out why this was happening. I set a breakpoint in the done function to check the session variable to ensure it was adding an order, but I noticed that it was always empty. Initially, I was using a list to store the data, but after searching online, I found that Flask has a built-in session feature, so I decided to use that instead.
+
+Using Flask’s session feature helped keep the orders as I wanted, but testing became tricky because the session would reset after each round.
+
 Testing Multiple Orders in a Session: When trying to implement the test_add_two_orders function, I realized that the Flask session automatically resets after each request in the testing environment. This makes it challenging to verify scenarios where multiple orders are added to the session at the same time. The default session behavior prevents keeping state across multiple test requests, which makes testing these scenarios hard without cumbersome workarounds or changes to how the session is handled.
 
 Even after several attempts, keeping a stable session with multiple orders wasn't feasible using the default test client configuration. To address this limitation, adjustments to session handling might be necessary, or it may be worth considering alternative state management approaches to allow more reliable testing in the future.
+
+Next time: 
 
 I began the debugging process later than planned, which led to time constraints that prevented me from running as many test cases as I had intended. Moving forward, I will ensure to allocate a full week dedicated to debugging in order to thoroughly test and refine the application before completion.
 During development, I continuously verified that everything functioned correctly by frequently testing the website.
