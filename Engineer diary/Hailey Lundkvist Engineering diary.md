@@ -89,6 +89,10 @@
 - For debuggin I used the test_select_a_column() function and ran the test. I start by connecting to the database using the file path, and then we use a cursor to execute SQL commands. The test then calls another_select_a_column, specifying that it should retrieve all entries from the "name" column in the "burger" table.
 
 The test compares the retrieved data to a known set of values: 'cheese burger', 'fish burger', 'vegan burger'. By seeing whether or not this comparison matches, we can determine if another_select_a_column is functioning correctly. If there’s a mismatch, it could indicate an issue with data retrieval, an error in the column name, or even a problem with the database connection. This test thus provides a quick way to check and debug issues in data selection within the database.
+
+Testing posed significant obstacles due to the inaccessibility of the database within the kitchen view and order components. The database was configured as a Docker volume, which introduced complexities when validating functionality reliant on data retrieval. Future testing strategies should prioritize implementing a mocked database instead of relying on the live instance. Mocking offers granular control over the data, fostering a more predictable and controlled testing environment.
+
+For instance, when evaluating a data-fetching function, leveraging the actual database introduces uncertainty, as the dataset may fluctuate between test executions. In contrast, a mocked database allows for precise definition of the dataset, minimizing inconsistencies. This approach ensures uniformity across test runs, resulting in more deterministic and reliable outcomes, thereby enhancing both test stability and overall confidence in the results.
      
 #### Week 42:
     - Edited my engineering diary and added some final touches.
