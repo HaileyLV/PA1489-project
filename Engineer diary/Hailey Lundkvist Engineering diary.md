@@ -90,9 +90,27 @@
 
 The test compares the retrieved data to a known set of values: 'cheese burger', 'fish burger', 'vegan burger'. By seeing whether or not this comparison matches, we can determine if another_select_a_column is functioning correctly. If there’s a mismatch, it could indicate an issue with data retrieval, an error in the column name, or even a problem with the database connection. This test thus provides a quick way to check and debug issues in data selection within the database.
 
-Testing posed significant obstacles due to the inaccessibility of the database within the kitchen view and order components. The database was configured as a Docker volume, which introduced complexities when validating functionality reliant on data retrieval. Future testing strategies should prioritize implementing a mocked database instead of relying on the live instance. Mocking offers granular control over the data, fostering a more predictable and controlled testing environment.
+To initiate the debugging process, I inserted breakpoints at pivotal locations in the code housed within the appy.py file, located in the Burger_Orderer directory. These breakpoints targeted key moments in the order submission process:
 
-For instance, when evaluating a data-fetching function, leveraging the actual database introduces uncertainty, as the dataset may fluctuate between test executions. In contrast, a mocked database allows for precise definition of the dataset, minimizing inconsistencies. This approach ensures uniformity across test runs, resulting in more deterministic and reliable outcomes, thereby enhancing both test stability and overall confidence in the results.
+Handling POST data: The line where the system processes incoming form data (request.form).
+Adding product selections: The point where user choices are appended to the order.
+Database save operation: The final step where the order is stored in the database.
+Debugging Techniques:
+Continue: I employed the "Continue" function to execute the code until the next breakpoint, observing where the logic broke down.
+Step Over: When validating POST data, I used "Step Over" to bypass function internals and view results at a higher level.
+Step Into: For deeper inspection, particularly in suspected faulty validation steps, "Step Into" allowed me to dissect the internal workings of functions.
+Step Out: Once satisfied with the internal analysis, "Step Out" returned me to the main code flow.
+Variable Tracking and Insights
+A critical variable, form_data, became the focal point of my investigation. Initially, this variable was empty, but after processing the form, it was evident that user choices were not correctly mapped. By adding form_data to the debugger’s watch list, I observed its behavior in real time and pinpointed where updates failed.
+
+Analyzing Divergent Code Paths
+Testing multiple scenarios revealed deeper insights:
+
+Ordering alternative menus: I tested different menus to confirm whether the issue was isolated to the "done" menu. The problem persisted across all options, indicating a broader flaw in the validation logic.
+Order cancellation: Cancelling an order mid-process exposed a complete failure to update form_data, highlighting flaws in handling partial transactions.
+- Reflection: The debugging journey highlighted parallels with database testing challenges. Similar to the unpredictability of using live databases, reliance on real-time form data introduced variability. Mocking techniques, as used in database tests, could be adapted here to stabilize form input validation. Implementing controlled test cases would ensure consistent results, enhancing both accuracy and reliability.
+
+This experience emphasized the importance of breakpoint-driven debugging and strategic variable monitoring to diagnose and resolve complex issues, ultimately leading to a more robust and user-friendly ordering system.
      
 #### Week 42:
     - Edited my engineering diary and added some final touches.
